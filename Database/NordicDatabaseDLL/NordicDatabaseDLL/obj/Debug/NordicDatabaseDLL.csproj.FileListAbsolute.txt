@@ -1,0 +1,5 @@
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.csprojResolveAssemblyReference.cache
