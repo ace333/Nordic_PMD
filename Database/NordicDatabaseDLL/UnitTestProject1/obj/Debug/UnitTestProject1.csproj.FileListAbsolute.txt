@@ -6,3 +6,11 @@ C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\UnitTestProject1\bin\Deb
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\bin\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\bin\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

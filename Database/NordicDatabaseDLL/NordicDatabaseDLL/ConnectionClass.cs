@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace NordicDatabaseDLL
 {
@@ -17,9 +18,8 @@ namespace NordicDatabaseDLL
 
         #region Enum
 
-        enum DBTableEnum
+        public enum DBTableEnum
         {
-            Temperature,
             HeartRate,
             XAccelero,
             YAccelero,
@@ -42,7 +42,7 @@ namespace NordicDatabaseDLL
 
         private void SetConnection()
         {
-            connection = new SqlConnection("Data Source=192.168.11.234;" +
+            connection = new SqlConnection("Data Source=95.51.168.59,41433;" +
                 "Initial Catalog=test_db;" +
                 "Integrated Security=False;" +
                 "User ID=arekc;" +
@@ -70,14 +70,12 @@ namespace NordicDatabaseDLL
 
             if (type == DBTableEnum.HeartRate)
                 tableName = "heart_m_";
-            else if (type == DBTableEnum.Temperature)
-                tableName = "temp_m_";
             else if (type == DBTableEnum.XAccelero)
                 tableName = "x_m_";
             else if (type == DBTableEnum.YAccelero)
                 tableName = "y_m_";
             else if (type == DBTableEnum.ZAccelero)
-                tableName = "x_m_";
+                tableName = "z_m_";
 
             return tableName;
         }
@@ -98,30 +96,29 @@ namespace NordicDatabaseDLL
         {
             string tableName = type.ToString();
             string columnName = SwitchToColumnName(type);
+            string[] dt = new string[data.Length];
 
-            float data1 = data[0];
-            float data2 = data[1];
-            float data3 = data[2];
-            float data4 = data[3];
-            float data5 = data[4];
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                dt[i] = data[i].ToString();
+                dt[i] = dt[i].Replace(',', '.');
+            }
+
+            string data1 = dt[0];
+            string data2 = dt[1];
+            string data3 = dt[2];
+            string data4 = dt[3];
+            string data5 = dt[4];
 
             string sql = string.Format("INSERT INTO {0} (patient_ID, {1}1, {1}2, {1}3, {1}4, {1}5) VALUES ({2}, {3}, {4}, {5}, {6}, {7});",
                 tableName, columnName, patientNumber, data1, data2, data3, data4, data5);
 
-            using (SqlTransaction transaction = connection.BeginTransaction())
-            {
-                try
-                {
-                    SqlCommand cmd = new SqlCommand(sql, connection, transaction);
-                    cmd.ExecuteNonQuery();
-                    transaction.Commit();
-                }
-                catch(Exception)
-                {
-                    transaction.Rollback();
-                }
-            }
-                
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            cmd.ExecuteNonQuery();
+
+
         }
 
         private DataTable Select(DBTableEnum type, int patientID)
@@ -144,29 +141,66 @@ namespace NordicDatabaseDLL
 
         #endregion
 
-        #region Temperature
+        #region Patients
 
-        public void InsertDataTemperature(float[] temperatureData)
+        public DataTable SelectAllPatients()
         {
-            Insert(temperatureData, DBTableEnum.Temperature);
-        }
+            string sql = "SELECT * FROM Patients";
 
-        public float[] SelectDataTemperature()
-        {
-            DataTable dt = Select(DBTableEnum.Temperature, patientNumber);
-            float[] tempData = new float[amountOfColumns];
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            cmd.ExecuteNonQuery();
 
-            for (int i = 0; i < amountOfColumns; i++)
-            {
-                string column = "temp_m_" + (i + 1);
-                tempData[i] = float.Parse(dt.Rows[0][column].ToString());
-            }
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
 
-            return tempData;
-
+            return dt;
         }
 
         #endregion
+
+        #region Get ID Methods
+
+        public int GetLastHeartRateID()
+        {
+            DBTableEnum type = DBTableEnum.HeartRate;
+            return SelectLastID(type);
+        }
+
+        public int GetLastXAxisID()
+        {
+            DBTableEnum type = DBTableEnum.XAccelero;
+            return SelectLastID(type);
+        }        
+
+        public int GetLastYAxisID()
+        {
+            DBTableEnum type = DBTableEnum.YAccelero;
+            return SelectLastID(type);
+        }
+
+        public int GetLastZAxisID()
+        {
+            DBTableEnum type = DBTableEnum.ZAccelero;
+            return SelectLastID(type);
+        }
+
+        private int SelectLastID(DBTableEnum type)
+        {
+            string tableName = type.ToString();
+            string columnName = SwitchToColumnName(type);
+            string idColumn = RefactorToIdString(columnName);
+
+            string sql = string.Format("SELECT TOP 1 {0} FROM {1} ORDER BY {0} DESC", idColumn, tableName);
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            dt.Load(cmd.ExecuteReader());
+
+            int ID = Convert.ToInt32(dt.Rows[0][0]);
+            return ID;
+        }
+
+        #endregion
+
 
         #region HearRate
 

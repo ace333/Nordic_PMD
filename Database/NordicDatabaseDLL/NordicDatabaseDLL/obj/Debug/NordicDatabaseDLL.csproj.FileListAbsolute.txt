@@ -3,3 +3,13 @@ C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabase
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.dll
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.pdb
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\Visual Studio 2015\Projects\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.pdb

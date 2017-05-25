@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NordicDatabaseDLL", "NordicDatabaseDLL\NordicDatabaseDLL.csproj", "{DAC99DB9-5354-49B3-8E15-A445C3A89522}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{85F7343E-54ED-4C5D-A2AE-8293D05B4DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{3709F442-EE07-40DF-8B81-2E275C4707A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DAC99DB9-5354-49B3-8E15-A445C3A89522}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAC99DB9-5354-49B3-8E15-A445C3A89522}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAC99DB9-5354-49B3-8E15-A445C3A89522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F7343E-54ED-4C5D-A2AE-8293D05B4DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F7343E-54ED-4C5D-A2AE-8293D05B4DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F7343E-54ED-4C5D-A2AE-8293D05B4DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F7343E-54ED-4C5D-A2AE-8293D05B4DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3709F442-EE07-40DF-8B81-2E275C4707A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3709F442-EE07-40DF-8B81-2E275C4707A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3709F442-EE07-40DF-8B81-2E275C4707A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3709F442-EE07-40DF-8B81-2E275C4707A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,6 +13,7 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="DB" Type="Folder">
 			<Item Name="dbTest.vi" Type="VI" URL="../dbTest.vi"/>
+			<Item Name="dbInsert_subVI.vi" Type="VI" URL="../dbInsert_subVI.vi"/>
 		</Item>
 		<Item Name="Controls" Type="Folder">
 			<Item Name="data_typedef.ctl" Type="VI" URL="../data_typedef.ctl"/>
@@ -32,14 +33,16 @@
 		</Item>
 		<Item Name="Main" Type="Folder">
 			<Item Name="uart data_main.vi" Type="VI" URL="../uart data_main.vi"/>
+			<Item Name="uart data_main — kopia.vi" Type="VI" URL="../uart data_main — kopia.vi"/>
 		</Item>
+		<Item Name="testVI.vi" Type="VI" URL="../testVI.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 			</Item>
-			<Item Name="NordicDatabaseDLL.dll" Type="Document" URL="../../../../../SkyDrive/Dokumenty/Visual Studio 2015/Projects/NordicDatabaseDLL/NordicDatabaseDLL/bin/Debug/NordicDatabaseDLL.dll"/>
+			<Item Name="NordicDatabaseDLL.dll" Type="Document" URL="../../../../../Visual Studio 2015/Projects/NordicDatabaseDLL/NordicDatabaseDLL/bin/Debug/NordicDatabaseDLL.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
