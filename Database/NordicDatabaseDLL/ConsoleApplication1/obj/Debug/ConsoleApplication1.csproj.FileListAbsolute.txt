@@ -1,0 +1,8 @@
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\bin\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicSemiconductor\Database\NordicDatabaseDLL\ConsoleApplication1\bin\Debug\NordicDatabaseDLL.pdb
