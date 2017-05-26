@@ -35,15 +35,24 @@ namespace NordicMobile.Activities
         private BackgroundWorker worker = new BackgroundWorker();
         private bool isWorkerActive = true;
         private bool doubleBackToExitPressedOnce = false;
+        private int conn_lost;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            conn_lost = Intent.GetIntExtra("conn_lost", 0);
             worker.DoWork += Worker_DoWork;
 
+
             if(IsInternetConnectionReachable())
-            {
-                StartActivity(typeof(InfoActivity));
+            { 
+                if(conn_lost == 1)
+                {
+                    StartActivity(typeof(MainActivity));
+                }
+                else
+                    StartActivity(typeof(InfoActivity));
             }
             else
             {
@@ -90,8 +99,13 @@ namespace NordicMobile.Activities
                     isWorkerActive = false;
 
                     await Task.Delay(500);
-                    
-                    StartActivity(typeof(InfoActivity));
+
+                    if (conn_lost == 1)
+                    {
+                        StartActivity(typeof(MainActivity));
+                    }
+                    else
+                        StartActivity(typeof(InfoActivity));
                 }
                 await Task.Delay(1000);
             }

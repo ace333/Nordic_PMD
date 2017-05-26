@@ -27,6 +27,7 @@ using Android.Net;
 using NordicDatabaseDLL;
 using NordicMobile.Charts;
 using NordicMobile.Enums;
+using Android.Content;
 
 namespace NordicMobile.Activities
 {
@@ -107,7 +108,11 @@ namespace NordicMobile.Activities
 
                     await Task.Delay(2000);
 
-                    StartActivity(typeof(WebConnection));
+
+                    var activity = new Intent(this, typeof(WebConnection));
+                    activity.PutExtra("conn_lost", 1);
+                    StartActivity(activity);
+
                     break;
                 }
             }

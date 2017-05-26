@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Samsung SM-G920F</SelectedDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <DefaultDevice>Android_Accelerated_x86</DefaultDevice>
   </PropertyGroup>
 </Project>
