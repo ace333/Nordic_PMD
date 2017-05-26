@@ -53,6 +53,18 @@ namespace NordicMobile.Activities
 
             GetLastIds();
 
+            int conn_lost = Intent.GetIntExtra("conn_lost", 0);
+            if (conn_lost == 1)
+            {
+                var activity = new Intent(this, typeof(MainActivity));
+                activity.PutExtra("x_id", x_id);
+                activity.PutExtra("y_id", y_id);
+                activity.PutExtra("z_id", z_id);
+                activity.PutExtra("heart_id", heart_id);
+
+                StartActivity(activity);
+            }
+
             SetPatientsList();
 
             Button button = FindViewById<Button>(Resource.Id.startButton);
