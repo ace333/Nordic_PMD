@@ -44,7 +44,7 @@ namespace NordicMobile.Charts
         {
             AxisMin = -2.5F;
             AxisMax = 2.5F;
-            Maximum = 15;
+            Maximum = 50;
             Data = new LineData();
         }
 
