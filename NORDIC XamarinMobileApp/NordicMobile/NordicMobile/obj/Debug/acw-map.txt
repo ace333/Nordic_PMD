@@ -1,0 +1,12 @@
+NordicMobile.Activities.InfoActivity, NordicMobile;md51a6dcbd5a53e1256ca5bc564cafd8064.InfoActivity
+NordicMobile.Activities.InfoActivity, NordicMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51a6dcbd5a53e1256ca5bc564cafd8064.InfoActivity
+NordicMobile.Activities.InfoActivity;md51a6dcbd5a53e1256ca5bc564cafd8064.InfoActivity
+nordicmobile.activities.InfoActivity;md51a6dcbd5a53e1256ca5bc564cafd8064.InfoActivity
+NordicMobile.Activities.MainActivity, NordicMobile;md51a6dcbd5a53e1256ca5bc564cafd8064.MainActivity
+NordicMobile.Activities.MainActivity, NordicMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51a6dcbd5a53e1256ca5bc564cafd8064.MainActivity
+NordicMobile.Activities.MainActivity;md51a6dcbd5a53e1256ca5bc564cafd8064.MainActivity
+nordicmobile.activities.MainActivity;md51a6dcbd5a53e1256ca5bc564cafd8064.MainActivity
+NordicMobile.Activities.WebConnection, NordicMobile;md51a6dcbd5a53e1256ca5bc564cafd8064.WebConnection
+NordicMobile.Activities.WebConnection, NordicMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md51a6dcbd5a53e1256ca5bc564cafd8064.WebConnection
+NordicMobile.Activities.WebConnection;md51a6dcbd5a53e1256ca5bc564cafd8064.WebConnection
+nordicmobile.activities.WebConnection;md51a6dcbd5a53e1256ca5bc564cafd8064.WebConnection
