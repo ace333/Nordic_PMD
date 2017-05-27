@@ -51,8 +51,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
-    <Reference Include="NordicDatabaseDLL">
-      <HintPath>..\..\..\..\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.dll</HintPath>
+    <Reference Include="NordicDatabaseDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\NORDIC Database\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

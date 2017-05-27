@@ -74,3 +74,4 @@ C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC XamarinMobileApp\
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC XamarinMobileApp\NordicMobile\NordicMobile\obj\Debug\android\assets\MPAndroidChart.dll.mdb
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC XamarinMobileApp\NordicMobile\NordicMobile\obj\Debug\android\assets\NordicDatabaseDLL.dll.mdb
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC XamarinMobileApp\NordicMobile\NordicMobile\obj\Debug\android\assets\NordicMobile.dll.mdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC XamarinMobileApp\NordicMobile\NordicMobile\bin\Debug\NordicDatabaseDLL.dll

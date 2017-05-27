@@ -27,6 +27,8 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 
+using NordicDatabaseDLL;
+
 namespace NordicMobile.Charts
 {
     class AcceleroPlot //: IChartModifier
@@ -37,8 +39,14 @@ namespace NordicMobile.Charts
         public float AxisMax { get; private set; }
         public float Maximum { get; private set; }
 
+        private List<float> Xes = new List<float>();
+        private List<float> Yes = new List<float>();
+        private List<float> Zes = new List<float>();
+
         public int Counter { get; set; }
         public LineData Data { get; set; }
+
+        public FallChecker fall = new FallChecker();
 
         public AcceleroPlot()
         {
@@ -46,6 +54,22 @@ namespace NordicMobile.Charts
             AxisMax = 2.5F;
             Maximum = 50;
             Data = new LineData();
+        }
+
+        private void EditLists()
+        {
+            while (Xes.Count > Maximum)
+            {
+                Xes.RemoveAt(0);
+                Yes.RemoveAt(0);
+                Zes.RemoveAt(0);
+            }
+        }
+
+        public bool CheckIfFall()
+        {
+            EditLists();
+            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 0.5F, 20);
         }
 
         public void AddEntry(float[] X, float[] Y, float[] Z)
@@ -71,21 +95,41 @@ namespace NordicMobile.Charts
                 Data.AddEntry(new Entry(Time, Y[0]), 1);
                 Data.AddEntry(new Entry(Time++, Z[0]), 2);
 
+                Xes.Add(X[0]);
+                Yes.Add(Y[0]);
+                Zes.Add(Z[0]);
+
                 Data.AddEntry(new Entry(Time, X[1]), 0);
                 Data.AddEntry(new Entry(Time, Y[1]), 1);
                 Data.AddEntry(new Entry(Time++, Z[1]), 2);
+
+                Xes.Add(X[1]);
+                Yes.Add(Y[1]);
+                Zes.Add(Z[1]);
 
                 Data.AddEntry(new Entry(Time, X[2]), 0);
                 Data.AddEntry(new Entry(Time, Y[2]), 1);
                 Data.AddEntry(new Entry(Time++, Z[2]), 2);
 
+                Xes.Add(X[2]);
+                Yes.Add(Y[2]);
+                Zes.Add(Z[2]);
+
                 Data.AddEntry(new Entry(Time, X[3]), 0);
                 Data.AddEntry(new Entry(Time, Y[3]), 1);
                 Data.AddEntry(new Entry(Time++, Z[3]), 2);
 
+                Xes.Add(X[3]);
+                Yes.Add(Y[3]);
+                Zes.Add(Z[3]);
+
                 Data.AddEntry(new Entry(Time, X[4]), 0);
                 Data.AddEntry(new Entry(Time, Y[4]), 1);
                 Data.AddEntry(new Entry(Time++, Z[4]), 2);
+
+                Xes.Add(X[4]);
+                Yes.Add(Y[4]);
+                Zes.Add(Z[4]);
             }
 
             TimeRegulation();

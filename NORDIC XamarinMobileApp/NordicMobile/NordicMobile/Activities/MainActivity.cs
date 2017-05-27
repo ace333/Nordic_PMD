@@ -221,6 +221,15 @@ namespace NordicMobile.Activities
                     {
                         PerformAcceleroAddingEntries();
 
+                        if (acceleroPlot.CheckIfFall())
+                        {
+                            chart.SetBackgroundColor(Android.Graphics.Color.LightSalmon);
+                        }
+                        else
+                            chart.SetBackgroundColor(Android.Graphics.Color.White);
+                            
+                                                
+
                         if(firstData)
                         {
                             Action buttonEnable = () => button.Enabled = true;
