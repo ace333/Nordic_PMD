@@ -24,20 +24,15 @@ namespace NordicDatabaseDLL
         private const int border = 5;
         private bool isFucked;
 
-
         public bool CheckIfFall(float[] dataX, float[] dataY, float[] dataZ, float delta, int samplesAmount)
         {
-            float[] validX, validY, validZ;
+            isFucked = false;
 
-            if(!CheckIfTabIsLongEnough(dataX) || !CheckIfTabIsLongEnough(dataX) || !CheckIfTabIsLongEnough(dataZ))
+            if(!CheckIfTabIsLongEnough(dataX, samplesAmount) || !CheckIfTabIsLongEnough(dataX, samplesAmount) 
+                || !CheckIfTabIsLongEnough(dataZ, samplesAmount))
             {
                 return false;
             }
-
-            //operations on last 100 samples
-            validX = ObtainLastValidValuesFromTab(dataX);
-            validY = ObtainLastValidValuesFromTab(dataY);
-            validZ = ObtainLastValidValuesFromTab(dataZ);
 
             //next calculations done only when isFucked is false
             CheckSamples(dataX, delta, samplesAmount);
@@ -51,15 +46,23 @@ namespace NordicDatabaseDLL
 
         private void CheckSamples(float[] data, float delta, int samplesAmount)
         {
-            int maxIndex = border - samplesAmount;
-            float[] calcTab = new float[samplesAmount];
 
-            for(int i=0; i <= maxIndex; i++)
+            float[] calcTab = new float[samplesAmount];
+            int iter;
+
+            for(int i=0; i <= data.Length; i++)
             {
-                //filling calcTab with data from data Table
-                for(int j=i; j<samplesAmount; j++)
+                iter = 0;
+                int j = i;
+
+                if (j > data.Length - samplesAmount)
                 {
-                    calcTab[j] = data[j];
+                    break;
+                }
+                    
+                while (iter < samplesAmount)
+                {
+                    calcTab[iter++] = data[j++];
                 }
 
                 DoDeltaCalculations(calcTab, delta);
@@ -84,24 +87,30 @@ namespace NordicDatabaseDLL
                             isFucked = true;
                             return;
                         }
-                            
+
                     }
                 }
             }
         }
 
-        private bool CheckIfTabIsLongEnough(float[] tab)
+        private bool CheckIfTabIsLongEnough(float[] tab, int samplesAmount)
         {
-            if (tab.Length < border)
+            if (tab.Length < samplesAmount)
                 return false;
             else
                 return true;
         }
 
-        private float[] ObtainLastValidValuesFromTab(float[] tab)
+        private float[] ObtainLastValidValuesFromTab(float[] tab, int samplesAmount)
         {
-            float[] validTab = new float[border];
-            int index = tab.Length - border;
+            int length;
+            if (samplesAmount > tab.Length)
+                length = tab.Length;
+            else
+                length = samplesAmount;
+
+            float[] validTab = new float[length];
+            int index = tab.Length - length;
             int iter = 0;
 
             for(int i=index; i<tab.Length; i++)

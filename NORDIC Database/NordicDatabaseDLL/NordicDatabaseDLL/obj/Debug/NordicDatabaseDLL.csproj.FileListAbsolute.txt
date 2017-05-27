@@ -13,3 +13,8 @@ C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\bin\De
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.csprojResolveAssemblyReference.cache
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.dll
 C:\Users\Arkadiusz\SkyDrive\Dokumenty\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC Database\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC Database\NordicDatabaseDLL\NordicDatabaseDLL\bin\Debug\NordicDatabaseDLL.pdb
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC Database\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.csprojResolveAssemblyReference.cache
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC Database\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.dll
+C:\Users\Arkadiusz\SkyDrive\Dokumenty\NORDIC\Nordic_PMD\NORDIC Database\NordicDatabaseDLL\NordicDatabaseDLL\obj\Debug\NordicDatabaseDLL.pdb
