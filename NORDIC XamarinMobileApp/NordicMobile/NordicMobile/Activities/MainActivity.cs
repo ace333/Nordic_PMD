@@ -97,6 +97,7 @@ namespace NordicMobile.Activities
                 if (!IsInternetConnectionReachable())
                 {
                     worker.CancelAsync();
+                    conn.CloseConnection();
 
                     var dialog = new AlertDialog.Builder(this);
                     dialog.SetMessage("no internet connectivity");
