@@ -112,8 +112,8 @@ namespace NordicMobile.Charts
             sets.Add(setZ);
 
             ModifyALineDataSet(setX, Color.Red);
-            ModifyALineDataSet(setY, Color.Green);
-            ModifyALineDataSet(setZ, Color.Blue);          
+            ModifyALineDataSet(setY, Color.Blue);
+            ModifyALineDataSet(setZ, Color.Green);          
 
             return sets;
         }
