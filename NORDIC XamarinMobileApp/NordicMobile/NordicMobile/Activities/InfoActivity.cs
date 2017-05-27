@@ -61,7 +61,6 @@ namespace NordicMobile.Activities
                 activity.PutExtra("y_id", y_id);
                 activity.PutExtra("z_id", z_id);
                 activity.PutExtra("heart_id", heart_id);
-
                 StartActivity(activity);
             }
 

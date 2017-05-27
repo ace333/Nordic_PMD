@@ -104,7 +104,9 @@ namespace NordicMobile.Activities
 
                     if (conn_lost == 1)
                     {
-                        StartActivity(typeof(MainActivity));
+                        var activity = new Intent(this, typeof(InfoActivity));
+                        activity.PutExtra("conn_lost", 1);
+                        StartActivity(activity);
                     }
                     else
                         StartActivity(typeof(InfoActivity));

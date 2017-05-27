@@ -39,6 +39,9 @@ namespace NordicMobile.Charts
         public float AxisMax { get; private set; }
         public float Maximum { get; private set; }
 
+        private float axisMinimum = 0;
+        private float axisMaximum = 0;
+
         public LineData Data { get; set; }
 
         private bool isFirstValidValuesAdded = true;
@@ -80,16 +83,19 @@ namespace NordicMobile.Charts
             float min = ParseValueByScale(data.Min());
             float max = ParseValueByScale(data.Max());
 
-            //float min = ParseValueByScale(data);
-            //int indexOf = min.ToString().IndexOf(',');
-            //string value = min.ToString().Substring(0, indexOf + 3);
-            //float validMin = float.Parse(value, System.Globalization.NumberStyles.Float);
+            if(axisMaximum == 0 || min < axisMaximum)
+            {
+                float finalMin = min - 0.001F;
+                axisMaximum = finalMin;
+                AxisMin = finalMin;
+            }
 
-            float finalMin = min - 0.002F;
-            float finalMax = max + 0.003F;
-
-            AxisMin = finalMin;
-            AxisMax = max;
+            if(max > axisMaximum)
+            {
+                float finalMax = max + 0.001F;
+                axisMaximum = finalMax;
+                AxisMax = finalMax;
+            }           
         }
 
         private float ParseValueByScale(float data)
