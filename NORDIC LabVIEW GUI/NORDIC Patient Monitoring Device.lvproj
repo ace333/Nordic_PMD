@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="15008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -16,6 +17,7 @@
 			<Item Name="QData.ctl" Type="VI" URL="../ctrls/QData.ctl"/>
 			<Item Name="RefsBox.ctl" Type="VI" URL="../ctrls/RefsBox.ctl"/>
 			<Item Name="States.ctl" Type="VI" URL="../ctrls/States.ctl"/>
+			<Item Name="Heart Monitor-50.ico" Type="Document" URL="../ctrls/Heart Monitor-50.ico"/>
 		</Item>
 		<Item Name="subs" Type="Folder">
 			<Item Name="AccDataToRealValue.vi" Type="VI" URL="../subs/AccDataToRealValue.vi"/>
@@ -27,6 +29,7 @@
 			<Item Name="EnableAllNotifications.vi" Type="VI" URL="../subs/EnableAllNotifications.vi"/>
 			<Item Name="SendACC.vi" Type="VI" URL="../subs/SendACC.vi"/>
 			<Item Name="SendHRS.vi" Type="VI" URL="../subs/SendHRS.vi"/>
+			<Item Name="CheckPosition.vi" Type="VI" URL="../subs/CheckPosition.vi"/>
 		</Item>
 		<Item Name="BLE context.lvclass" Type="LVClass" URL="../BLE Context/BLE context.lvclass"/>
 		<Item Name="BLE Message.lvclass" Type="LVClass" URL="../BLE Message/BLE Message.lvclass"/>
@@ -155,6 +158,48 @@
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="NordicDatabaseDLL.dll" Type="Document" URL="../DLLs/NordicDatabaseDLL.dll"/>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="Patient Monitoring Device" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{F23B278C-4840-4841-A68A-F69950EB997F}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{B5CA37B7-CEC0-4895-8B17-331F885B8341}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{59B08B46-4C79-4C0A-9E76-AE7A65161AFB}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Patient Monitoring Device</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/Ptient Monitroing Device</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{94631617-0ED2-47E6-AF90-28F1C2FF81C8}</Property>
+				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Patinet Monitoring Device.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/Ptient Monitroing Device/Patinet Monitoring Device.exe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/Ptient Monitroing Device/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/ctrls/Heart Monitor-50.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{77451004-2573-4A88-9F37-0CC2BEEBDEF9}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/main.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Patient Monitoring Device</Property>
+				<Property Name="TgtF_internalName" Type="Str">Patient Monitoring Device</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2017 </Property>
+				<Property Name="TgtF_productName" Type="Str">Patient Monitoring Device</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{43EF3439-D0E2-48C9-A3A5-4B1CAAC65ADD}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">Patinet Monitoring Device.exe</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
