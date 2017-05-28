@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>2017-05-27 22:39:04</xs:documentation>
+    <xs:documentation>2017-05-27 22:45:27</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -1408,7 +1408,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.components.MarkerView">
     <xs:complexContent mixed="false">
-      <xs:extension base="RelativeLayout" />
+      <xs:extension base="RelativeLayout">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.ScatterChart" type="com.github.mikephil.charting.charts.ScatterChart">
@@ -1418,7 +1421,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.ScatterChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.RadarChart" type="com.github.mikephil.charting.charts.RadarChart">
@@ -1428,7 +1434,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.RadarChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.PieRadarChartBase" type="com.github.mikephil.charting.charts.PieRadarChartBase">
@@ -1438,7 +1447,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.PieRadarChartBase">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.PieChart" type="com.github.mikephil.charting.charts.PieChart">
@@ -1448,7 +1460,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.PieChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.LineChart" type="com.github.mikephil.charting.charts.LineChart">
@@ -1458,7 +1473,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.LineChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.HorizontalBarChart" type="com.github.mikephil.charting.charts.HorizontalBarChart">
@@ -1468,7 +1486,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.HorizontalBarChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.CombinedChart" type="com.github.mikephil.charting.charts.CombinedChart">
@@ -1478,7 +1499,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.CombinedChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.Chart" type="com.github.mikephil.charting.charts.Chart">
@@ -1488,7 +1512,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.Chart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.CandleStickChart" type="com.github.mikephil.charting.charts.CandleStickChart">
@@ -1498,7 +1525,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.CandleStickChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.BubbleChart" type="com.github.mikephil.charting.charts.BubbleChart">
@@ -1508,7 +1538,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.BubbleChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.BarLineChartBase" type="com.github.mikephil.charting.charts.BarLineChartBase">
@@ -1518,7 +1551,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.BarLineChartBase">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.charts.BarChart" type="com.github.mikephil.charting.charts.BarChart">
@@ -1528,7 +1564,10 @@
   </xs:element>
   <xs:complexType name="com.github.mikephil.charting.charts.BarChart">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="ViewGroup">
+        <xs:attribute ref="android:pointerIcon" />
+        <xs:attribute ref="android:forceHasOverlappingRendering" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="merge" type="merge">
