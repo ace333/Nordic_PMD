@@ -8,7 +8,7 @@
   <application android:label="NordicMobile" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:label="Patient Monitoring Device" android:name="md51a6dcbd5a53e1256ca5bc564cafd8064.InfoActivity" />
     <activity android:label="Patient Monitoring Device" android:name="md51a6dcbd5a53e1256ca5bc564cafd8064.MainActivity" />
-    <activity android:icon="@drawable/icon" android:label="Patient Monitoring Device" android:name="md51a6dcbd5a53e1256ca5bc564cafd8064.WebConnection">
+    <activity android:icon="@drawable/pmd_icon" android:label="Patient Monitoring Device" android:name="md51a6dcbd5a53e1256ca5bc564cafd8064.WebConnection">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

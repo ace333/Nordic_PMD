@@ -29,7 +29,7 @@ using System.Threading.Tasks;
 
 namespace NordicMobile.Activities
 {
-    [Activity(Label = "Patient Monitoring Device", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Patient Monitoring Device", MainLauncher = true, Icon = "@drawable/pmd_icon")]
     public class WebConnection : Activity
     {
 
