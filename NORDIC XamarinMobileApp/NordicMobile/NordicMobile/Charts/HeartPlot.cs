@@ -38,8 +38,6 @@ namespace NordicMobile.Charts
         private float axisMinimum = 0;
         private float axisMaximum = 0;
 
-        private bool isFirstValidValuesAdded = true;
-
         #endregion
         
         #region Constructor
@@ -61,10 +59,10 @@ namespace NordicMobile.Charts
             float min = ParseValueByScale(data.Min());
             float max = ParseValueByScale(data.Max());
 
-            if (axisMaximum == 0 || min < axisMaximum)
+            if (axisMinimum == 0 || min < axisMinimum)
             {
                 float finalMin = min - 0.001F;
-                axisMaximum = finalMin;
+                axisMinimum = finalMin;
                 AxisMin = finalMin;
             }
 
