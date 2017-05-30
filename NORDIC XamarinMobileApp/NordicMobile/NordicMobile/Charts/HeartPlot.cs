@@ -94,7 +94,6 @@ namespace NordicMobile.Charts
                 Data.AddEntry(new Entry(Time++, -5), 0);
             }
 
-            isFirstValidValuesAdded = true;
             TimeRegulation();
         }
 
