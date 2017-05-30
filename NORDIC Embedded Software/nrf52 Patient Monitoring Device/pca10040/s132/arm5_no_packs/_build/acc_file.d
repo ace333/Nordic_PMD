@@ -39,3 +39,4 @@
 .\_build\acc_file.o: ..\..\..\..\..\..\components\drivers_nrf\hal\nrf_twi.h
 .\_build\acc_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\acc_file.o: ..\..\..\..\..\..\components\drivers_nrf\delay\nrf_delay.h
+.\_build\acc_file.o: ..\..\..\config.h

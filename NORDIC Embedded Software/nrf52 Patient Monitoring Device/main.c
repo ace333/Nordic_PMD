@@ -7,7 +7,6 @@ Redistribution and use in source and binary forms, with or without modification,
 in the documentation and/or other materials provided with the distribution.
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote 
 products derived from this software without specific prior written permission.
-
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
 INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
 DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
@@ -15,20 +14,6 @@ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PRO
 LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, 
 STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-
-/** @file
- *
- * @defgroup ble_sdk_app_template_main main.c
- * @{
- * @ingroup ble_sdk_app_template
- * @brief Template project main file.
- *
- * This file contains a template for creating a new application. It has the code necessary to wakeup
- * from button, advertise, get a connection restart advertising on disconnect and if no new
- * connection created go back to system-off mode.
- * It can easily be used as a starting point for creating a new application, the comments identified
- * with 'YOUR_JOB' indicates where and how you can customize.
  */
 
 #include <stdint.h>
@@ -124,9 +109,7 @@ void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
 // ALREADY_DONE_FOR_YOU: This is a timer event handler
 static void timer_timeout_handler(void * p_context)
 {
-    // OUR_JOB: Step 3.F, Update characteristic value.
-		// Dodac funkcje ktore beda odpowiadaly za pobieranie wartosci ze sprzetu wazne! Moze jednak dodac w osobnych plikach
-	
+	  //Get and send data
 		int ACC ;
 		uint32_t HRS_Data = 99 ;
 	
@@ -146,7 +129,7 @@ static void timer_timeout_handler(void * p_context)
 		printf("HRS: %d\r\n",HRS_Data);
 		hrs_value_update(&hrs_service, &HRS_Data);
 	
-    // Save current temperatura jake until next measurement
+	  //dioda lans, niezly bans
     nrf_gpio_pin_toggle(LED_4);
 		
 }
@@ -560,7 +543,6 @@ static void power_manage(void)
     uint32_t err_code = sd_app_evt_wait();
     APP_ERROR_CHECK(err_code);
 }
-
 
 //WYRZUCONY UART
 /**

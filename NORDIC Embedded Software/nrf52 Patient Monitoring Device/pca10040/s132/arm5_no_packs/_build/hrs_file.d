@@ -36,3 +36,4 @@
 .\_build\hrs_file.o: ..\..\..\..\..\..\components\drivers_nrf\config\nrf_drv_config_validation.h
 .\_build\hrs_file.o: ..\..\..\..\..\..\components\drivers_nrf\hal\nrf_twi.h
 .\_build\hrs_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build\hrs_file.o: ..\..\..\config.h
