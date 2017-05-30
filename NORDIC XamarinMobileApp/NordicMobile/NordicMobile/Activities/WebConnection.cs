@@ -32,10 +32,17 @@ namespace NordicMobile.Activities
     [Activity(Label = "Patient Monitoring Device", MainLauncher = true, Icon = "@drawable/icon")]
     public class WebConnection : Activity
     {
+
+        #region Class Fields
+
         private BackgroundWorker worker = new BackgroundWorker();
         private bool isWorkerActive = true;
         private bool doubleBackToExitPressedOnce = false;
         private int conn_lost;
+
+        #endregion
+
+        #region OnCreate
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,13 +52,11 @@ namespace NordicMobile.Activities
             worker.DoWork += Worker_DoWork;
 
 
-            if(IsInternetConnectionReachable())
-            { 
-                if(conn_lost == 1)
+            if (IsInternetConnectionReachable())
+            {
+                if (conn_lost == 1)
                 {
-                    var activity = new Intent(this, typeof(InfoActivity));
-                    activity.PutExtra("conn_lost", 1);
-                    StartActivity(activity);
+                    StartInfoActivityWithExtras();
                 }
                 else
                     StartActivity(typeof(InfoActivity));
@@ -60,8 +65,12 @@ namespace NordicMobile.Activities
             {
                 SetContentView(Resource.Layout.Internet);
                 worker.RunWorkerAsync();
-            }            
+            }
         }
+
+        #endregion
+
+        #region OnBackPressed
 
         public override void OnBackPressed()
         {
@@ -80,6 +89,48 @@ namespace NordicMobile.Activities
 
         }
 
+        #endregion
+
+        #region Cross-Activities Methods
+
+        private void StartInfoActivityWithExtras()
+        {
+            var activity = new Intent(this, typeof(InfoActivity));
+            activity.PutExtra("conn_lost", 1);
+            StartActivity(activity);
+        }
+
+        #endregion
+
+        #region BackWorkers
+
+        private async void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (isWorkerActive)
+            {
+                if (IsInternetConnectionReachable())
+                {
+                    Action action = () => Toast.MakeText(this, "Connected to internet!", ToastLength.Short).Show();
+                    RunOnUiThread(action);
+                    isWorkerActive = false;
+
+                    await Task.Delay(500);
+
+                    if (conn_lost == 1)
+                    {
+                        StartInfoActivityWithExtras();
+                    }
+                    else
+                        StartActivity(typeof(InfoActivity));
+                }
+                await Task.Delay(1000);
+            }
+        }
+
+        #endregion
+
+        #region Internet connection Checker
+
         private bool IsInternetConnectionReachable()
         {
             ConnectivityManager connectivityManager = (ConnectivityManager)GetSystemService(ConnectivityService);
@@ -90,29 +141,7 @@ namespace NordicMobile.Activities
                 return info.IsConnected;
         }
 
-        private async void Worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            while(isWorkerActive)
-            {
-                if(IsInternetConnectionReachable())
-                {
-                    Action action = () => Toast.MakeText(this, "Connected to internet!", ToastLength.Short).Show();
-                    RunOnUiThread(action);
-                    isWorkerActive = false;
-
-                    await Task.Delay(500);
-
-                    if (conn_lost == 1)
-                    {
-                        var activity = new Intent(this, typeof(InfoActivity));
-                        activity.PutExtra("conn_lost", 1);
-                        StartActivity(activity);
-                    }
-                    else
-                        StartActivity(typeof(InfoActivity));
-                }
-                await Task.Delay(1000);
-            }
-        }
+        #endregion
+        
     }
 }

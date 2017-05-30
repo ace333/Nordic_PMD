@@ -11,30 +11,40 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
-
-
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using MikePhil.Charting.Data;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Graphics;
+using MikePhil.Charting.Data;
 
 namespace NordicMobile.Abstract
 {
-    interface IChartModifier
+    public abstract class AbstractPlot
     {
-        void AddEntry(float[] heartData);
-        IEnumerable<LineDataSet> CreateSets();
-        void ModifyALineDataSet(LineDataSet set, Color color);
-        
+        #region Class Fields
+
+        public int Time { get; set; }
+        public int Counter { get; set; }
+        public LineData Data { get; set; }
+
+        public float AxisMin { get; set; }
+        public float AxisMax { get; set; }
+        public float Maximum { get; set; }
+
+        #endregion
+
+        #region Virtual and Abstract methods
+
+        public virtual void AddEntry(float[] X, float[] Y, float[] Z)
+        {
+            //overriden
+        }
+        public virtual void AddEntry(float[] data)
+        {
+            //overriden
+        }
+        public abstract IEnumerable<LineDataSet> CreateSets();
+        public abstract void ModifyALineDataSet(LineDataSet set, Color color);
+
+        #endregion
+
     }
 }

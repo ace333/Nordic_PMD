@@ -28,25 +28,24 @@ using Android.Widget;
 using Android.Graphics;
 
 using NordicDatabaseDLL;
+using NordicMobile.Abstract;
 
 namespace NordicMobile.Charts
 {
-    class AcceleroPlot //: IChartModifier
+    class AcceleroPlot : AbstractPlot
     {
-        public int Time { get; set; }
 
-        public float AxisMin { get; private set; }
-        public float AxisMax { get; private set; }
-        public float Maximum { get; private set; }
+        #region Class Fields
 
         private List<float> Xes = new List<float>();
         private List<float> Yes = new List<float>();
         private List<float> Zes = new List<float>();
 
-        public int Counter { get; set; }
-        public LineData Data { get; set; }
-
         public FallChecker fall = new FallChecker();
+
+        #endregion
+
+        #region Constructor
 
         public AcceleroPlot()
         {
@@ -55,6 +54,20 @@ namespace NordicMobile.Charts
             Maximum = 50;
             Data = new LineData();
         }
+
+        #endregion
+
+        #region Fall Checker
+
+        public bool CheckIfFall()
+        {
+            EditLists();
+            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 0.5F, 20);
+        }
+
+        #endregion
+
+        #region Regulating and Editing Properties
 
         private void EditLists()
         {
@@ -66,13 +79,19 @@ namespace NordicMobile.Charts
             }
         }
 
-        public bool CheckIfFall()
+        private void TimeRegulation()
         {
-            EditLists();
-            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 0.5F, 20);
+            if (Time % Maximum == 0)
+            {
+                Counter++;
+            }
         }
 
-        public void AddEntry(float[] X, float[] Y, float[] Z)
+        #endregion
+
+        #region Override methods
+
+        public override void AddEntry(float[] X, float[] Y, float[] Z)
         {
             if (Data != null)
             {
@@ -135,15 +154,9 @@ namespace NordicMobile.Charts
             TimeRegulation();
         }
 
-        private void TimeRegulation()
-        {
-            if (Time % Maximum == 0)
-            {
-                Counter++;
-            }            
-        }
+        
 
-        public IEnumerable<LineDataSet> CreateSets()
+        public override IEnumerable<LineDataSet> CreateSets()
         {
             LineDataSet setX = new LineDataSet(null, "X");
             LineDataSet setY = new LineDataSet(null, "Y");
@@ -157,12 +170,12 @@ namespace NordicMobile.Charts
 
             ModifyALineDataSet(setX, Color.Red);
             ModifyALineDataSet(setY, Color.Blue);
-            ModifyALineDataSet(setZ, Color.Green);          
+            ModifyALineDataSet(setZ, Color.Green);
 
             return sets;
         }
 
-        public void ModifyALineDataSet(LineDataSet set, Color color)
+        public override void ModifyALineDataSet(LineDataSet set, Color color)
         {
             set.CubicIntensity = 0.2F;
             set.AxisDependency = YAxis.AxisDependency.Left;
@@ -173,5 +186,8 @@ namespace NordicMobile.Charts
             set.SetDrawValues(false);
             set.ValueTextSize = 10F;
         }
+
+        #endregion
+
     }
 }

@@ -15,14 +15,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 
 using NordicDatabaseDLL;
@@ -33,6 +29,9 @@ namespace NordicMobile.Activities
     [Activity(Label = "Patient Monitoring Device")]
     public class InfoActivity : Activity
     {
+
+        #region Class fields
+
         private int x_id;
         private int y_id;
         private int z_id;
@@ -46,9 +45,13 @@ namespace NordicMobile.Activities
         private bool isSelected;
         private bool doubleBackToExitPressedOnce = false;
 
+        #endregion
+
+        #region OnCreate
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);            
+            base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Info);
 
             GetLastIds();
@@ -56,12 +59,7 @@ namespace NordicMobile.Activities
             int conn_lost = Intent.GetIntExtra("conn_lost", 0);
             if (conn_lost == 1)
             {
-                var activity = new Intent(this, typeof(MainActivity));
-                activity.PutExtra("x_id", x_id);
-                activity.PutExtra("y_id", y_id);
-                activity.PutExtra("z_id", z_id);
-                activity.PutExtra("heart_id", heart_id);
-                StartActivity(activity);
+                StartMainActivityWithExtraParameters();
             }
 
             SetPatientsList();
@@ -76,6 +74,10 @@ namespace NordicMobile.Activities
             listView.ItemClick += ListView_ItemClick;
 
         }
+
+        #endregion
+
+        #region OnBackPressed
 
         public override void OnBackPressed()
         {
@@ -94,27 +96,29 @@ namespace NordicMobile.Activities
 
         }
 
-        private void GetLastIds()
+        #endregion
+
+        #region Cross-Activities Methods
+
+        private void StartMainActivityWithExtraParameters()
         {
-            conn.OpenConnection();
-            x_id = conn.GetLastXAxisID();
-            y_id = conn.GetLastYAxisID();
-            z_id = conn.GetLastZAxisID();
-            heart_id = conn.GetLastHeartRateID();
-            conn.CloseConnection();
+            var activity = new Intent(this, typeof(MainActivity));
+            activity.PutExtra("x_id", x_id);
+            activity.PutExtra("y_id", y_id);
+            activity.PutExtra("z_id", z_id);
+            activity.PutExtra("heart_id", heart_id);
+            StartActivity(activity);
         }
+
+        #endregion
+
+        #region Click events
 
         private void Button_Click(object sender, EventArgs e)
         {
-            if(isSelected)
+            if (isSelected)
             {
-                var activity = new Intent(this, typeof(MainActivity));
-                activity.PutExtra("x_id", x_id);
-                activity.PutExtra("y_id", y_id);
-                activity.PutExtra("z_id", z_id);
-                activity.PutExtra("heart_id", heart_id);
-
-                StartActivity(activity);
+                StartMainActivityWithExtraParameters();
             }
             else
             {
@@ -132,6 +136,24 @@ namespace NordicMobile.Activities
             listView.SetSelection(id);
             isSelected = true;
         }
+
+        #endregion
+
+        #region DB Methods
+
+        private void GetLastIds()
+        {
+            conn.OpenConnection();
+            x_id = conn.GetLastXAxisID();
+            y_id = conn.GetLastYAxisID();
+            z_id = conn.GetLastZAxisID();
+            heart_id = conn.GetLastHeartRateID();
+            conn.CloseConnection();
+        }
+
+        #endregion
+
+        #region Setting Front
 
         private void SetTextViews(int index)
         {
@@ -170,7 +192,9 @@ namespace NordicMobile.Activities
 
                 patients.Add(patient);
             }
-
         }
+
+        #endregion
+
     }
 }

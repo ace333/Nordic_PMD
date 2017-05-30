@@ -30,21 +30,19 @@ using Android.Graphics;
 
 namespace NordicMobile.Charts
 {
-    class HeartPlot : IChartModifier
+    class HeartPlot : AbstractPlot
     {
-        public int Time { get; set; }
-        public int Counter { get; set; }
 
-        public float AxisMin { get; private set; }
-        public float AxisMax { get; private set; }
-        public float Maximum { get; private set; }
+        #region Class Fields
 
         private float axisMinimum = 0;
         private float axisMaximum = 0;
 
-        public LineData Data { get; set; }
-
         private bool isFirstValidValuesAdded = true;
+
+        #endregion
+        
+        #region Constructor
 
         public HeartPlot()
         {
@@ -52,6 +50,30 @@ namespace NordicMobile.Charts
             AxisMax = 12;
             Maximum = 50;
             Data = new LineData();
+        }
+
+        #endregion
+
+        #region Setting values
+
+        private void SetAxixBordersWithValidValues(float[] data)
+        {
+            float min = ParseValueByScale(data.Min());
+            float max = ParseValueByScale(data.Max());
+
+            if (axisMaximum == 0 || min < axisMaximum)
+            {
+                float finalMin = min - 0.001F;
+                axisMaximum = finalMin;
+                AxisMin = finalMin;
+            }
+
+            if (max > axisMaximum)
+            {
+                float finalMax = max + 0.001F;
+                axisMaximum = finalMax;
+                AxisMax = finalMax;
+            }
         }
 
         public void AddFalseEntry()
@@ -78,32 +100,28 @@ namespace NordicMobile.Charts
             TimeRegulation();
         }
 
-        private void SetAxixBordersWithValidValues(float[] data)
-        {
-            float min = ParseValueByScale(data.Min());
-            float max = ParseValueByScale(data.Max());
+        #endregion
 
-            if(axisMaximum == 0 || min < axisMaximum)
-            {
-                float finalMin = min - 0.001F;
-                axisMaximum = finalMin;
-                AxisMin = finalMin;
-            }
-
-            if(max > axisMaximum)
-            {
-                float finalMax = max + 0.001F;
-                axisMaximum = finalMax;
-                AxisMax = finalMax;
-            }           
-        }
+        #region Regulating and editing
 
         private float ParseValueByScale(float data)
         {
             return data / 100000;
         }
 
-        public void AddEntry(float[] heartData)
+        private void TimeRegulation()
+        {
+            if (Time % Maximum == 0)
+            {
+                Counter++;
+            }
+        }
+
+        #endregion
+
+        #region Override methods
+
+        public override void AddEntry(float[] heartData)
         {
             if (Data != null)
             {
@@ -117,7 +135,7 @@ namespace NordicMobile.Charts
                 }
 
 
-                SetAxixBordersWithValidValues(heartData);                
+                SetAxixBordersWithValidValues(heartData);
 
                 Data.AddEntry(new Entry(Time++, ParseValueByScale(heartData[0])), 0);
                 Data.AddEntry(new Entry(Time++, ParseValueByScale(heartData[1])), 0);
@@ -129,16 +147,7 @@ namespace NordicMobile.Charts
             TimeRegulation();
         }
 
-        private void TimeRegulation()
-        {
-            if (Time % Maximum == 0)
-            {
-                Counter++;
-            }
-        }
-
-
-        public IEnumerable<LineDataSet> CreateSets()
+        public override IEnumerable<LineDataSet> CreateSets()
         {
             LineDataSet set = new LineDataSet(null, "HeartRate");
             List<LineDataSet> sets = new List<LineDataSet>();
@@ -149,7 +158,7 @@ namespace NordicMobile.Charts
             return sets;
         }
 
-        public void ModifyALineDataSet(LineDataSet set, Color color)
+        public override void ModifyALineDataSet(LineDataSet set, Color color)
         {
             set.CubicIntensity = 0.2F;
             set.AxisDependency = YAxis.AxisDependency.Left;
@@ -160,5 +169,8 @@ namespace NordicMobile.Charts
             set.SetDrawValues(false);
             set.ValueTextSize = 10F;
         }
+
+        #endregion
+
     }
 }

@@ -27,6 +27,8 @@ using Android.Net;
 using NordicDatabaseDLL;
 using NordicMobile.Charts;
 using NordicMobile.Enums;
+using NordicMobile.Abstract;
+
 using Android.Content;
 
 namespace NordicMobile.Activities
@@ -34,6 +36,9 @@ namespace NordicMobile.Activities
     [Activity(Label = "Patient Monitoring Device")]
     public class MainActivity : Activity
     {
+
+        #region Class Fields
+
         private int x_id;
         private int y_id;
         private int z_id;
@@ -57,14 +62,18 @@ namespace NordicMobile.Activities
         private bool doubleBackToExitPressedOnce = false;
         private bool firstData = true;
 
+        #endregion
+
+        #region OnCreate
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView (Resource.Layout.Main);
+            SetContentView(Resource.Layout.Main);
 
             conn.OpenConnection();
 
+            //backworkers
             worker.DoWork += Worker_DoWork;
             worker.WorkerSupportsCancellation = true;
 
@@ -85,10 +94,35 @@ namespace NordicMobile.Activities
 
             SetChartParameters();
             SetAxisesParameters();
-
             OnFirstStart();
 
         }
+
+        #endregion
+
+        #region OnBackPressed
+
+        public override void OnBackPressed()
+        {
+            if (doubleBackToExitPressedOnce)
+            {
+                conn.CloseConnection();
+                var activity = (Activity)this;
+                activity.FinishAffinity();
+                return;
+            }
+
+            doubleBackToExitPressedOnce = true;
+            Toast.MakeText(this, "Click again to exit application", ToastLength.Short).Show();
+
+            Action action = () => doubleBackToExitPressedOnce = false;
+            new Handler().PostDelayed(action, 2000);
+
+        }
+
+        #endregion
+
+        #region BackWorkers
 
         private async void InternetWorker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -97,18 +131,15 @@ namespace NordicMobile.Activities
                 if (!IsInternetConnectionReachable())
                 {
                     worker.CancelAsync();
-                    //conn.CloseConnection();
 
                     var dialog = new AlertDialog.Builder(this);
                     dialog.SetMessage("no internet connectivity");
                     dialog.SetTitle("ERROR!");
 
-                    Action showDialog  = () => dialog.Show();
-                    RunOnUiThread(showDialog);                    
-                                        
+                    Action showDialog = () => dialog.Show();
+                    RunOnUiThread(showDialog);
 
                     await Task.Delay(2000);
-
 
                     var activity = new Intent(this, typeof(WebConnection));
                     activity.PutExtra("conn_lost", 1);
@@ -119,6 +150,27 @@ namespace NordicMobile.Activities
             }
         }
 
+        private void Worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                if (worker.CancellationPending)
+                {
+                    break;
+                }
+
+                if (CheckAccelero())
+                {
+                    CheckHeart();
+                }
+
+            }
+        }
+
+        #endregion
+
+        #region Internet connection Checker
+
         private bool IsInternetConnectionReachable()
         {
             ConnectivityManager connectivityManager = (ConnectivityManager)GetSystemService(ConnectivityService);
@@ -128,6 +180,8 @@ namespace NordicMobile.Activities
             else
                 return info.IsConnected;
         }
+
+        #endregion
 
         #region Checkers
 
@@ -179,26 +233,10 @@ namespace NordicMobile.Activities
                 return false;
         }
 
-        #endregion        
+        #endregion
 
-        #region Workers
+        #region Checking for new data from DB
 
-        private void Worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            while (true)
-            {
-                if(worker.CancellationPending)
-                {
-                    break;
-                }
-
-                if(CheckAccelero())
-                {
-                    CheckHeart();
-                }
-                    
-            }
-        }
 
         private void CheckHeart()
         {
@@ -254,13 +292,7 @@ namespace NordicMobile.Activities
 
         #endregion
 
-        private void PerformAcceleroAddingEntries()
-        {
-            float[] x = conn.SelectDataXAccelero();
-            float[] y = conn.SelectDataYAccelero();
-            float[] z = conn.SelectDataZAccelero();
-            AddAcceleroEntries(x, y, z);
-        }
+        #region Cross-Activity Methods
 
         private void GetParameters()
         {
@@ -270,23 +302,9 @@ namespace NordicMobile.Activities
             heart_id = Intent.GetIntExtra("heart_id", 0);
         }
 
-        public override void OnBackPressed()
-        {
-            if(doubleBackToExitPressedOnce)
-            {
-                conn.CloseConnection();
-                var activity = (Activity)this;
-                activity.FinishAffinity();
-                return;
-            }
+        #endregion
 
-            doubleBackToExitPressedOnce = true;
-            Toast.MakeText(this, "Click again to exit application", ToastLength.Short).Show();
-
-            Action action = () => doubleBackToExitPressedOnce = false;
-            new Handler().PostDelayed(action, 2000);
-                
-        }
+        #region ChartMethods
 
         private void SetChartParameters()
         {
@@ -346,49 +364,6 @@ namespace NordicMobile.Activities
             }
         }
 
-        private void Button_Click(object sender, EventArgs e)
-        {
-            ChangeCharts();
-        }
-
-        private void OnFirstStart()
-        {
-            //data to Chart
-            data = acceleroPlot.Data;
-            chart.Data = data;
-            whichPlot = ChartEnum.AcceleroChart;
-
-            //yAxis
-            yaxis.AxisMaximum = acceleroPlot.AxisMin;
-            yaxis.AxisMaximum = acceleroPlot.AxisMax;
-
-        }
-
-        private void AddAcceleroEntries(float[] X, float[] Y, float[] Z)
-        {
-            acceleroPlot.AddEntry(X, Y, Z);
-
-            chart.NotifyDataSetChanged();
-            DefineChart();
-        }
-
-        private void AddFalseHeartRateEntries()
-        {
-            heartPlot.AddFalseEntry();
-
-            chart.NotifyDataSetChanged();
-            DefineChart();
-        }
-
-        private void AddHeartRateEntries(float[] data)
-        {
-            heartPlot.AddEntry(data);
-
-            chart.NotifyDataSetChanged();
-            DefineChart();
-        }
-
-
         private void DefineChart()
         {
             if (whichPlot == ChartEnum.AcceleroChart)
@@ -408,6 +383,69 @@ namespace NordicMobile.Activities
                 chart.AxisLeft.AxisMaximum = heartPlot.AxisMax;
             }
         }
+        #endregion
+
+        #region Click methods
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            ChangeCharts();
+        }
+
+        #endregion
+
+        #region Adding Entries
+
+        private void AddAcceleroEntries(float[] X, float[] Y, float[] Z)
+        {
+            acceleroPlot.AddEntry(X, Y, Z);
+
+            chart.NotifyDataSetChanged();
+            DefineChart();
+        }
+
+        private void PerformAcceleroAddingEntries()
+        {
+            float[] x = conn.SelectDataXAccelero();
+            float[] y = conn.SelectDataYAccelero();
+            float[] z = conn.SelectDataZAccelero();
+            AddAcceleroEntries(x, y, z);
+        }
+
+        private void AddFalseHeartRateEntries()
+        {
+            heartPlot.AddFalseEntry();
+
+            chart.NotifyDataSetChanged();
+            DefineChart();
+        }
+
+        private void AddHeartRateEntries(float[] data)
+        {
+            heartPlot.AddEntry(data);
+
+            chart.NotifyDataSetChanged();
+            DefineChart();
+        }
+
+        #endregion
+
+        #region OnFirstStart
+
+        private void OnFirstStart()
+        {
+            //data to Chart
+            data = acceleroPlot.Data;
+            chart.Data = data;
+            whichPlot = ChartEnum.AcceleroChart;
+
+            //yAxis
+            yaxis.AxisMaximum = acceleroPlot.AxisMin;
+            yaxis.AxisMaximum = acceleroPlot.AxisMax;
+
+        }
+
+        #endregion
 
     }
 }
