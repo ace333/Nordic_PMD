@@ -62,7 +62,7 @@ namespace NordicMobile.Charts
         public bool CheckIfFall()
         {
             EditLists();
-            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 0.5F, 20);
+            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 1.2F, 20);
         }
 
         #endregion
