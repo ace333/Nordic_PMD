@@ -35,43 +35,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
  
- /*
-static void on_ble_write_acc1(ble_os_t * p_our_service, ble_evt_t * p_ble_evt)
-{
-    // Decclare buffer variable to hold received data. The data can only be 32 bit long.
-    uint32_t data_buffer; 
-    // Pupulate ble_gatts_value_t structure to hold received data and metadata.
-    ble_gatts_value_t rx_data;
-    rx_data.len = sizeof(uint32_t);
-    rx_data.offset = 0;
-    rx_data.p_value = (uint8_t*)&data_buffer;
-    
-    // Check if write event is performed on our characteristic or the CCCD
-    if(p_ble_evt->evt.gatts_evt.params.write.handle == p_our_service->char_handles_acc1.value_handle)
-    {
-        // Get data
-        sd_ble_gatts_value_get(p_our_service->conn_handle, p_our_service->char_handles_acc1.value_handle, &rx_data);
-        // Print handle and value 
-        printf("Value received on handle %#06x: %#010x\r\n", p_ble_evt->evt.gatts_evt.params.write.handle, data_buffer);
-    }
-    else if(p_ble_evt->evt.gatts_evt.params.write.handle == p_our_service->char_handles_acc1.cccd_handle)
-    {
-        // Get data
-        sd_ble_gatts_value_get(p_our_service->conn_handle, p_our_service->char_handles_acc1.cccd_handle, &rx_data);
-        // Print handle and value 
-        printf("Value received on handle %#06x: %#06x\r\n", p_ble_evt->evt.gatts_evt.params.write.handle, data_buffer);
-        if(data_buffer == 0x0001)
-        {
-            printf("Notification enabled\r\n");
-        }
-        else if(data_buffer == 0x0000)
-        {
-            printf("Notification disabled\r\n");
-        }
-    }
-}
-*/
-
+ 
 // ALREADY_DONE_FOR_YOU: Declaration of a function that will take care of some housekeeping of ble connections related to our service and characteristic
 void ble_our_service_on_ble_evt(ble_os_t * p_our_service, ble_evt_t * p_ble_evt)
 {
@@ -94,11 +58,7 @@ void ble_our_service_on_ble_evt(ble_os_t * p_our_service, ble_evt_t * p_ble_evt)
     }
 }
 
-/**@brief Function for adding our new characterstic to "Our service" that we initiated in the previous tutorial. 
- *
- * @param[in]   p_our_service        Our Service structure.
- *
- */
+
 static uint32_t ACC1_char_add(ble_os_t * p_our_service)
 {
     uint32_t   err_code = 0; // Variable to hold return codes from library and softdevice functions
@@ -412,7 +372,7 @@ void hrs_service_init(ble_os_t * p_our_service)
 
 
 // ALREADY_DONE_FOR_YOU: Function to be called when updating characteristic value
-void acc1_value_update(ble_os_t *p_our_service, int32_t *value)
+void acc1_value_update(ble_os_t *p_our_service, int16_t *value)
 {
     // OUR_JOB: Step 3.E, Update characteristic value
     if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)
@@ -431,7 +391,7 @@ void acc1_value_update(ble_os_t *p_our_service, int32_t *value)
     }   
 }		
 
-void acc2_value_update(ble_os_t *p_our_service, int32_t *value)
+void acc2_value_update(ble_os_t *p_our_service, int16_t *value)
 {
     // OUR_JOB: Step 3.E, Update characteristic value
     if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)
@@ -450,7 +410,7 @@ void acc2_value_update(ble_os_t *p_our_service, int32_t *value)
     } 		
 }
 
-void acc3_value_update(ble_os_t *p_our_service, int32_t *value)
+void acc3_value_update(ble_os_t *p_our_service, int16_t *value)
 {
     // OUR_JOB: Step 3.E, Update characteristic value
     if (p_our_service->conn_handle != BLE_CONN_HANDLE_INVALID)

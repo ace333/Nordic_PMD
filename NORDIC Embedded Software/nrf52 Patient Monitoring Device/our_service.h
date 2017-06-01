@@ -73,8 +73,8 @@ void hrs_service_init(ble_os_t * p_our_service);
  * @param[in]   p_our_service                     Our Service structure.
  * @param[in]   characteristic_value     New characteristic value.
  */
-void acc1_value_update(ble_os_t *p_our_service, int32_t *value);
-void acc2_value_update(ble_os_t *p_our_service, int32_t *value);
-void acc3_value_update(ble_os_t *p_our_service, int32_t *value);
+void acc1_value_update(ble_os_t *p_our_service, int16_t *value);
+void acc2_value_update(ble_os_t *p_our_service, int16_t *value);
+void acc3_value_update(ble_os_t *p_our_service, int16_t *value);
 void hrs_value_update(ble_os_t *p_our_service, uint32_t *value);
 #endif  /* _ OUR_SERVICE_H__ */

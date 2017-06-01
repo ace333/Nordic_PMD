@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\_build\nrf52832_xxaa_s132.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\_build\nrf52832_xxaa_s132.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue May 30 19:59:55 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu Jun 01 22:42:13 2017
 <BR><P>
 <H3>Maximum Stack Usage =        704 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -424,7 +424,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> arm_startup_nrf52.o(RESET)
 </UL>
-<P><STRONG><a name="[73]"></a>LSM303D_Get_ACC</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, acc_file.o(i.LSM303D_Get_ACC))
+<P><STRONG><a name="[73]"></a>LSM303D_Get_ACC</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, acc_file.o(i.LSM303D_Get_ACC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = LSM303D_Get_ACC &rArr; LSM303D_TWI_Get_Byte &rArr; LSM303D_set_mode &rArr; nrf_drv_twi_tx &rArr; nrf_drv_twi_xfer &rArr; twi_xfer &rArr; twi_tx_start_transfer &rArr; twi_transfer &rArr; twi_send_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LSM303D_TWI_Get_Byte
@@ -458,8 +458,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_timeout_handler
 </UL>
 
-<P><STRONG><a name="[78]"></a>LSM303D_Set_Default_Mode</STRONG> (Thumb, 194 bytes, Stack size 32 bytes, acc_file.o(i.LSM303D_Set_Default_Mode))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = LSM303D_Set_Default_Mode &rArr; nrf_drv_twi_tx &rArr; nrf_drv_twi_xfer &rArr; twi_xfer &rArr; twi_tx_start_transfer &rArr; twi_transfer &rArr; twi_send_byte
+<P><STRONG><a name="[78]"></a>LSM303D_Set_Default_Mode</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, acc_file.o(i.LSM303D_Set_Default_Mode))
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = LSM303D_Set_Default_Mode &rArr; nrf_drv_twi_tx &rArr; nrf_drv_twi_xfer &rArr; twi_xfer &rArr; twi_tx_start_transfer &rArr; twi_transfer &rArr; twi_send_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrf_drv_twi_tx
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrf_delay_ms
@@ -1578,7 +1578,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(i.ble_stack_init)
 </UL>
-<P><STRONG><a name="[46]"></a>timer_timeout_handler</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, main.o(i.timer_timeout_handler))
+<P><STRONG><a name="[46]"></a>timer_timeout_handler</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, main.o(i.timer_timeout_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 704<LI>Call Chain = timer_timeout_handler &rArr; MAX30105_Get_Sample &rArr; MAX30105_Get_Byte &rArr; MAX30105_set_pointer &rArr; nrf_drv_twi_tx &rArr; nrf_drv_twi_xfer &rArr; twi_xfer &rArr; twi_tx_start_transfer &rArr; twi_transfer &rArr; twi_send_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hrs_value_update
@@ -1637,7 +1637,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;acc_service_init
 </UL>
 
-<P><STRONG><a name="[6c]"></a>ACC3_char_add</STRONG> (Thumb, 350 bytes, Stack size 96 bytes, our_service.o(i.ACC3_char_add))
+<P><STRONG><a name="[6c]"></a>ACC3_char_add</STRONG> (Thumb, 348 bytes, Stack size 96 bytes, our_service.o(i.ACC3_char_add))
 <BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = ACC3_char_add &rArr; app_error_handler &rArr; app_error_fault_handler &rArr; bsp_indication_set &rArr; bsp_led_indication &rArr; app_timer_start &rArr; timer_start_op_schedule &rArr; user_op_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_error_handler
@@ -2447,9 +2447,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_process
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
+<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_store
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
 </UL>
 
 <P><STRONG><a name="[10d]"></a>cmd_queue_init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pstorage.o(i.cmd_queue_init))
@@ -2588,10 +2588,10 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[16c]"></a>is_word_aligned</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pstorage.o(i.is_word_aligned))
-<BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_load
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
+<BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_store
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_load
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
 </UL>
 
 <P><STRONG><a name="[130]"></a>main_state_err_busy_process</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, pstorage.o(i.main_state_err_busy_process))
