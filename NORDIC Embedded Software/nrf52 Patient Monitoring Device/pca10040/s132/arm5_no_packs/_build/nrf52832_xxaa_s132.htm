@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\_build\nrf52832_xxaa_s132.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\_build\nrf52832_xxaa_s132.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu Jun 01 22:42:13 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Fri Jun 02 11:41:35 2017
 <BR><P>
 <H3>Maximum Stack Usage =        704 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1355,8 +1355,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_word_aligned
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_queue_enqueue
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> device_manager_peripheral.o(i.device_context_store)
-<LI> device_manager_peripheral.o(i.gatts_context_store)
+<BR>[Address Reference Count : 2]<UL><LI> device_manager_peripheral.o(i.gatts_context_store)
+<LI> device_manager_peripheral.o(i.device_context_store)
 </UL>
 <P><STRONG><a name="[16e]"></a>pstorage_sys_event_handler</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, pstorage.o(i.pstorage_sys_event_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = pstorage_sys_event_handler &rArr; flash_operation_success_run &rArr; erase_sub_state_sm_run &rArr; clear_post_processing_run &rArr; store_operation_execute &rArr; sm_state_change &rArr; state_entry_action_run &rArr; state_store_entry_run &rArr; store_cmd_flash_write_execute &rArr; flash_write &rArr; flash_api_err_code_process &rArr; app_notify_error_state_transit &rArr;  sm_state_change (Cycle)
@@ -1373,8 +1373,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_word_aligned
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_queue_enqueue
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> device_manager_peripheral.o(i.device_context_store)
-<LI> device_manager_peripheral.o(i.gatts_context_store)
+<BR>[Address Reference Count : 2]<UL><LI> device_manager_peripheral.o(i.gatts_context_store)
+<LI> device_manager_peripheral.o(i.device_context_store)
 </UL>
 <P><STRONG><a name="[f3]"></a>sd_check_ram_start</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, softdevice_handler.o(i.sd_check_ram_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = sd_check_ram_start
@@ -2447,9 +2447,9 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cmd_process
 </UL>
-<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
+<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_store
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
 </UL>
 
 <P><STRONG><a name="[10d]"></a>cmd_queue_init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pstorage.o(i.cmd_queue_init))
@@ -2588,10 +2588,10 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[16c]"></a>is_word_aligned</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pstorage.o(i.is_word_aligned))
-<BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_store
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_load
+<BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_load
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_clear
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_update
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pstorage_store
 </UL>
 
 <P><STRONG><a name="[130]"></a>main_state_err_busy_process</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, pstorage.o(i.main_state_err_busy_process))

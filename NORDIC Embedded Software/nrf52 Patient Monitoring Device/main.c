@@ -16,8 +16,7 @@ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdint.h>
-#include <string.h>
+
 #include "nordic_common.h"
 #include "nrf.h"
 #include "app_error.h"

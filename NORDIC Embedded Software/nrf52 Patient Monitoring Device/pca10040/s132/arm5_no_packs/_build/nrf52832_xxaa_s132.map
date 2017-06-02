@@ -2715,33 +2715,33 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x0001c000   0x00000200   Data   RO         3520    RESET               arm_startup_nrf52.o
-    0x0001c200   0x00000000   Code   RO         3610  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x0001c200   0x00000004   Code   RO         3884    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0001c204   0x00000004   Code   RO         3887    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x0001c208   0x00000000   Code   RO         3889    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x0001c208   0x00000000   Code   RO         3891    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x0001c208   0x00000008   Code   RO         3892    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0001c210   0x00000000   Code   RO         3894    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0001c210   0x00000000   Code   RO         3896    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0001c210   0x00000004   Code   RO         3885    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x0001c214   0x00000076   Code   RO         1499    .emb_text           nrf_delay.o
+    0x0001c000   0x00000200   Data   RO         3514    RESET               arm_startup_nrf52.o
+    0x0001c200   0x00000000   Code   RO         3604  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0001c200   0x00000004   Code   RO         3878    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0001c204   0x00000004   Code   RO         3881    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0001c208   0x00000000   Code   RO         3883    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0001c208   0x00000000   Code   RO         3885    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0001c208   0x00000008   Code   RO         3886    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0001c210   0x00000000   Code   RO         3888    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0001c210   0x00000000   Code   RO         3890    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0001c210   0x00000004   Code   RO         3879    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0001c214   0x00000076   Code   RO         1502    .emb_text           nrf_delay.o
     0x0001c28a   0x00000002   PAD
-    0x0001c28c   0x00000076   Code   RO         2428    .emb_text           nrf_drv_twi.o
+    0x0001c28c   0x00000076   Code   RO         2431    .emb_text           nrf_drv_twi.o
     0x0001c302   0x00000002   PAD
-    0x0001c304   0x00000076   Code   RO         2911    .emb_text           app_timer.o
+    0x0001c304   0x00000076   Code   RO         2905    .emb_text           app_timer.o
     0x0001c37a   0x00000002   PAD
-    0x0001c37c   0x00000024   Code   RO         3521    .text               arm_startup_nrf52.o
-    0x0001c3a0   0x00000024   Code   RO         3613    .text               mc_w.l(memcpya.o)
-    0x0001c3c4   0x00000024   Code   RO         3615    .text               mc_w.l(memseta.o)
-    0x0001c3e8   0x0000001a   Code   RO         3619    .text               mc_w.l(memcmp.o)
-    0x0001c402   0x0000002c   Code   RO         3898    .text               mc_w.l(uidiv.o)
+    0x0001c37c   0x00000024   Code   RO         3515    .text               arm_startup_nrf52.o
+    0x0001c3a0   0x00000024   Code   RO         3607    .text               mc_w.l(memcpya.o)
+    0x0001c3c4   0x00000024   Code   RO         3609    .text               mc_w.l(memseta.o)
+    0x0001c3e8   0x0000001a   Code   RO         3613    .text               mc_w.l(memcmp.o)
+    0x0001c402   0x0000002c   Code   RO         3892    .text               mc_w.l(uidiv.o)
     0x0001c42e   0x00000002   PAD
-    0x0001c430   0x00000024   Code   RO         3913    .text               mc_w.l(init.o)
+    0x0001c430   0x00000024   Code   RO         3907    .text               mc_w.l(init.o)
     0x0001c454   0x0000017c   Code   RO          387    i.ACC1_char_add     our_service.o
     0x0001c5d0   0x0000017c   Code   RO          388    i.ACC2_char_add     our_service.o
     0x0001c74c   0x0000017c   Code   RO          389    i.ACC3_char_add     our_service.o
-    0x0001c8c8   0x000001b8   Code   RO         1569    i.GPIOTE_IRQHandler  nrf_drv_gpiote.o
+    0x0001c8c8   0x000001b8   Code   RO         1572    i.GPIOTE_IRQHandler  nrf_drv_gpiote.o
     0x0001ca80   0x00000180   Code   RO          390    i.HRS_char_add      our_service.o
     0x0001cc00   0x00000036   Code   RO          608    i.LSM303D_Get_ACC   acc_file.o
     0x0001cc36   0x0000000c   Code   RO          610    i.LSM303D_Get_X     acc_file.o
@@ -2758,377 +2758,377 @@ Memory Map of the image
     0x0001cf10   0x0000004c   Code   RO          512    i.MAX30105_default_HRS_config  hrs_file.o
     0x0001cf5c   0x00000048   Code   RO          513    i.MAX30105_set_pointer  hrs_file.o
     0x0001cfa4   0x00000054   Code   RO          514    i.MAX30105_twi_init  hrs_file.o
-    0x0001cff8   0x00000018   Code   RO         2912    i.NVIC_ClearPendingIRQ  app_timer.o
-    0x0001d010   0x00000016   Code   RO         2913    i.NVIC_EnableIRQ    app_timer.o
+    0x0001cff8   0x00000018   Code   RO         2906    i.NVIC_ClearPendingIRQ  app_timer.o
+    0x0001d010   0x00000016   Code   RO         2907    i.NVIC_EnableIRQ    app_timer.o
     0x0001d026   0x00000002   PAD
-    0x0001d028   0x00000018   Code   RO         2914    i.NVIC_SetPendingIRQ  app_timer.o
-    0x0001d040   0x00000028   Code   RO         2915    i.NVIC_SetPriority  app_timer.o
-    0x0001d068   0x00000034   Code   RO         2916    i.RTC1_IRQHandler   app_timer.o
-    0x0001d09c   0x00000014   Code   RO         2429    i.SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler  nrf_drv_twi.o
-    0x0001d0b0   0x00000014   Code   RO         2430    i.SPIM1_SPIS1_TWIM1_TWIS1_SPI1_TWI1_IRQHandler  nrf_drv_twi.o
-    0x0001d0c4   0x00000008   Code   RO         2917    i.SWI0_EGU0_IRQHandler  app_timer.o
-    0x0001d0cc   0x00000038   Code   RO         3410    i.SWI2_EGU2_IRQHandler  softdevice_handler.o
-    0x0001d104   0x00000010   Code   RO         3528    i.SystemCoreClockUpdate  system_nrf52.o
-    0x0001d114   0x00000268   Code   RO         3529    i.SystemInit        system_nrf52.o
-    0x0001d37c   0x00000018   Code   RO         1808    i.UARTE0_UART0_IRQHandler  nrf_drv_uart.o
-    0x0001d394   0x00000020   Code   RO         3668    i.__0printf$1       mc_w.l(printf1.o)
-    0x0001d3b4   0x0000000e   Code   RO         3925    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0001d3c2   0x00000002   Code   RO         3926    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0001d3c4   0x0000000e   Code   RO         3927    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0001d028   0x00000018   Code   RO         2908    i.NVIC_SetPendingIRQ  app_timer.o
+    0x0001d040   0x00000028   Code   RO         2909    i.NVIC_SetPriority  app_timer.o
+    0x0001d068   0x00000034   Code   RO         2910    i.RTC1_IRQHandler   app_timer.o
+    0x0001d09c   0x00000014   Code   RO         2432    i.SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler  nrf_drv_twi.o
+    0x0001d0b0   0x00000014   Code   RO         2433    i.SPIM1_SPIS1_TWIM1_TWIS1_SPI1_TWI1_IRQHandler  nrf_drv_twi.o
+    0x0001d0c4   0x00000008   Code   RO         2911    i.SWI0_EGU0_IRQHandler  app_timer.o
+    0x0001d0cc   0x00000038   Code   RO         3404    i.SWI2_EGU2_IRQHandler  softdevice_handler.o
+    0x0001d104   0x00000010   Code   RO         3522    i.SystemCoreClockUpdate  system_nrf52.o
+    0x0001d114   0x00000268   Code   RO         3523    i.SystemInit        system_nrf52.o
+    0x0001d37c   0x00000018   Code   RO         1811    i.UARTE0_UART0_IRQHandler  nrf_drv_uart.o
+    0x0001d394   0x00000020   Code   RO         3662    i.__0printf$1       mc_w.l(printf1.o)
+    0x0001d3b4   0x0000000e   Code   RO         3919    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0001d3c2   0x00000002   Code   RO         3920    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0001d3c4   0x0000000e   Code   RO         3921    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0001d3d2   0x00000002   PAD
-    0x0001d3d4   0x00000154   Code   RO         3675    i._printf_core      mc_w.l(printf1.o)
+    0x0001d3d4   0x00000154   Code   RO         3669    i._printf_core      mc_w.l(printf1.o)
     0x0001d528   0x00000044   Code   RO          391    i.acc1_value_update  our_service.o
     0x0001d56c   0x00000044   Code   RO          392    i.acc2_value_update  our_service.o
     0x0001d5b0   0x00000044   Code   RO          393    i.acc3_value_update  our_service.o
     0x0001d5f4   0x00000090   Code   RO          394    i.acc_service_init  our_service.o
-    0x0001d684   0x000001c6   Code   RO          864    i.adv_data_encode   ble_advdata.o
-    0x0001d84a   0x00000012   Code   RO          865    i.advdata_check     ble_advdata.o
-    0x0001d85c   0x00000054   Code   RO          808    i.advertising_buttons_configure  bsp_btn_ble.o
+    0x0001d684   0x000001c6   Code   RO          860    i.adv_data_encode   ble_advdata.o
+    0x0001d84a   0x00000012   Code   RO          861    i.advdata_check     ble_advdata.o
+    0x0001d85c   0x00000054   Code   RO          804    i.advertising_buttons_configure  bsp_btn_ble.o
     0x0001d8b0   0x00000074   Code   RO            5    i.advertising_init  main.o
-    0x0001d924   0x00000024   Code   RO          691    i.alert_timer_handler  bsp.o
-    0x0001d948   0x0000002c   Code   RO         2786    i.app_button_enable  app_button.o
-    0x0001d974   0x000000a8   Code   RO         2787    i.app_button_init   app_button.o
-    0x0001da1c   0x0000001a   Code   RO         2887    i.app_error_fault_handler  app_error_weak.o
-    0x0001da36   0x00000020   Code   RO         2847    i.app_error_handler  app_error.o
+    0x0001d924   0x00000024   Code   RO          694    i.alert_timer_handler  bsp.o
+    0x0001d948   0x0000002c   Code   RO         2780    i.app_button_enable  app_button.o
+    0x0001d974   0x000000a8   Code   RO         2781    i.app_button_init   app_button.o
+    0x0001da1c   0x0000001a   Code   RO         2881    i.app_error_fault_handler  app_error_weak.o
+    0x0001da36   0x00000020   Code   RO         2841    i.app_error_handler  app_error.o
     0x0001da56   0x00000002   PAD
-    0x0001da58   0x00000088   Code   RO         2849    i.app_error_save_and_stop  app_error.o
-    0x0001dae0   0x00000020   Code   RO         1225    i.app_evt_notify    device_manager_peripheral.o
-    0x0001db00   0x0000001e   Code   RO         2706    i.app_fifo_get      app_fifo.o
-    0x0001db1e   0x00000024   Code   RO         2707    i.app_fifo_init     app_fifo.o
-    0x0001db42   0x00000022   Code   RO         2709    i.app_fifo_put      app_fifo.o
-    0x0001db64   0x00000030   Code   RO         2094    i.app_notify        pstorage.o
-    0x0001db94   0x00000028   Code   RO         2095    i.app_notify_error_state_transit  pstorage.o
-    0x0001dbbc   0x0000003c   Code   RO         2920    i.app_timer_create  app_timer.o
-    0x0001dbf8   0x000000b8   Code   RO         2921    i.app_timer_init    app_timer.o
-    0x0001dcb0   0x00000058   Code   RO         2922    i.app_timer_start   app_timer.o
-    0x0001dd08   0x00000034   Code   RO         2923    i.app_timer_stop    app_timer.o
-    0x0001dd3c   0x000000cc   Code   RO         2625    i.app_uart_init     app_uart_fifo.o
-    0x0001de08   0x00000038   Code   RO         2626    i.app_uart_put      app_uart_fifo.o
-    0x0001de40   0x00000052   Code   RO          866    i.appearance_encode  ble_advdata.o
+    0x0001da58   0x00000088   Code   RO         2843    i.app_error_save_and_stop  app_error.o
+    0x0001dae0   0x00000020   Code   RO         1228    i.app_evt_notify    device_manager_peripheral.o
+    0x0001db00   0x0000001e   Code   RO         2700    i.app_fifo_get      app_fifo.o
+    0x0001db1e   0x00000024   Code   RO         2701    i.app_fifo_init     app_fifo.o
+    0x0001db42   0x00000022   Code   RO         2703    i.app_fifo_put      app_fifo.o
+    0x0001db64   0x00000030   Code   RO         2097    i.app_notify        pstorage.o
+    0x0001db94   0x00000028   Code   RO         2098    i.app_notify_error_state_transit  pstorage.o
+    0x0001dbbc   0x0000003c   Code   RO         2914    i.app_timer_create  app_timer.o
+    0x0001dbf8   0x000000b8   Code   RO         2915    i.app_timer_init    app_timer.o
+    0x0001dcb0   0x00000058   Code   RO         2916    i.app_timer_start   app_timer.o
+    0x0001dd08   0x00000034   Code   RO         2917    i.app_timer_stop    app_timer.o
+    0x0001dd3c   0x000000cc   Code   RO         2628    i.app_uart_init     app_uart_fifo.o
+    0x0001de08   0x00000038   Code   RO         2629    i.app_uart_put      app_uart_fifo.o
+    0x0001de40   0x00000052   Code   RO          862    i.appearance_encode  ble_advdata.o
     0x0001de92   0x00000002   Code   RO            6    i.application_timers_start  main.o
-    0x0001de94   0x000000bc   Code   RO         1809    i.apply_config      nrf_drv_uart.o
-    0x0001df50   0x00000094   Code   RO          867    i.ble_advdata_set   ble_advdata.o
-    0x0001dfe4   0x0000017c   Code   RO          986    i.ble_advertising_init  ble_advertising.o
-    0x0001e160   0x000000f8   Code   RO          987    i.ble_advertising_on_ble_evt  ble_advertising.o
-    0x0001e258   0x0000004c   Code   RO          988    i.ble_advertising_on_sys_evt  ble_advertising.o
-    0x0001e2a4   0x00000010   Code   RO          990    i.ble_advertising_peer_address_clear  ble_advertising.o
-    0x0001e2b4   0x00000078   Code   RO          991    i.ble_advertising_restart_without_whitelist  ble_advertising.o
-    0x0001e32c   0x00000288   Code   RO          992    i.ble_advertising_start  ble_advertising.o
-    0x0001e5b4   0x00000070   Code   RO         1088    i.ble_conn_params_init  ble_conn_params.o
-    0x0001e624   0x0000003e   Code   RO         1089    i.ble_conn_params_on_ble_evt  ble_conn_params.o
-    0x0001e662   0x00000074   Code   RO          868    i.ble_device_addr_encode  ble_advdata.o
+    0x0001de94   0x000000bc   Code   RO         1812    i.apply_config      nrf_drv_uart.o
+    0x0001df50   0x00000094   Code   RO          863    i.ble_advdata_set   ble_advdata.o
+    0x0001dfe4   0x0000017c   Code   RO          985    i.ble_advertising_init  ble_advertising.o
+    0x0001e160   0x000000f8   Code   RO          986    i.ble_advertising_on_ble_evt  ble_advertising.o
+    0x0001e258   0x0000004c   Code   RO          987    i.ble_advertising_on_sys_evt  ble_advertising.o
+    0x0001e2a4   0x00000010   Code   RO          989    i.ble_advertising_peer_address_clear  ble_advertising.o
+    0x0001e2b4   0x00000078   Code   RO          990    i.ble_advertising_restart_without_whitelist  ble_advertising.o
+    0x0001e32c   0x00000288   Code   RO          991    i.ble_advertising_start  ble_advertising.o
+    0x0001e5b4   0x00000070   Code   RO         1087    i.ble_conn_params_init  ble_conn_params.o
+    0x0001e624   0x0000003e   Code   RO         1088    i.ble_conn_params_on_ble_evt  ble_conn_params.o
+    0x0001e662   0x00000074   Code   RO          864    i.ble_device_addr_encode  ble_advdata.o
     0x0001e6d6   0x00000002   PAD
     0x0001e6d8   0x0000003c   Code   RO            8    i.ble_evt_dispatch  main.o
     0x0001e714   0x00000020   Code   RO          395    i.ble_our_service_on_ble_evt  our_service.o
     0x0001e734   0x0000010c   Code   RO            9    i.ble_stack_init    main.o
-    0x0001e840   0x00000050   Code   RO         1226    i.bond_data_load    device_manager_peripheral.o
-    0x0001e890   0x00000038   Code   RO          809    i.bsp_btn_ble_init  bsp_btn_ble.o
-    0x0001e8c8   0x00000078   Code   RO          810    i.bsp_btn_ble_on_ble_evt  bsp_btn_ble.o
-    0x0001e940   0x0000001c   Code   RO          811    i.bsp_btn_ble_sleep_mode_prepare  bsp_btn_ble.o
-    0x0001e95c   0x000000dc   Code   RO          692    i.bsp_button_event_handler  bsp.o
-    0x0001ea38   0x00000038   Code   RO          693    i.bsp_button_is_pressed  bsp.o
+    0x0001e840   0x00000050   Code   RO         1229    i.bond_data_load    device_manager_peripheral.o
+    0x0001e890   0x00000038   Code   RO          805    i.bsp_btn_ble_init  bsp_btn_ble.o
+    0x0001e8c8   0x00000078   Code   RO          806    i.bsp_btn_ble_on_ble_evt  bsp_btn_ble.o
+    0x0001e940   0x0000001c   Code   RO          807    i.bsp_btn_ble_sleep_mode_prepare  bsp_btn_ble.o
+    0x0001e95c   0x000000dc   Code   RO          695    i.bsp_button_event_handler  bsp.o
+    0x0001ea38   0x00000038   Code   RO          696    i.bsp_button_is_pressed  bsp.o
     0x0001ea70   0x0000007c   Code   RO           10    i.bsp_event_handler  main.o
-    0x0001eaec   0x0000005c   Code   RO          697    i.bsp_event_to_button_action_assign  bsp.o
-    0x0001eb48   0x00000020   Code   RO          698    i.bsp_indication_set  bsp.o
-    0x0001eb68   0x000000d0   Code   RO          700    i.bsp_init          bsp.o
-    0x0001ec38   0x0000059c   Code   RO          701    i.bsp_led_indication  bsp.o
-    0x0001f1d4   0x00000050   Code   RO          702    i.bsp_wakeup_buttons_set  bsp.o
-    0x0001f224   0x0000000e   Code   RO          703    i.button_timer_handler  bsp.o
+    0x0001eaec   0x0000005c   Code   RO          700    i.bsp_event_to_button_action_assign  bsp.o
+    0x0001eb48   0x00000020   Code   RO          701    i.bsp_indication_set  bsp.o
+    0x0001eb68   0x000000d0   Code   RO          703    i.bsp_init          bsp.o
+    0x0001ec38   0x0000059c   Code   RO          704    i.bsp_led_indication  bsp.o
+    0x0001f1d4   0x00000050   Code   RO          705    i.bsp_wakeup_buttons_set  bsp.o
+    0x0001f224   0x0000000e   Code   RO          706    i.button_timer_handler  bsp.o
     0x0001f232   0x00000002   PAD
     0x0001f234   0x00000074   Code   RO           11    i.buttons_leds_init  main.o
-    0x0001f2a8   0x00000020   Code   RO         1570    i.channel_free      nrf_drv_gpiote.o
-    0x0001f2c8   0x00000010   Code   RO         1571    i.channel_handler_get  nrf_drv_gpiote.o
-    0x0001f2d8   0x00000080   Code   RO         1572    i.channel_port_alloc  nrf_drv_gpiote.o
-    0x0001f358   0x0000000c   Code   RO         1573    i.channel_port_get  nrf_drv_gpiote.o
-    0x0001f364   0x00000104   Code   RO         2096    i.clear_operation_execute  pstorage.o
-    0x0001f468   0x00000028   Code   RO         2097    i.clear_post_processing_run  pstorage.o
-    0x0001f490   0x00000048   Code   RO         2098    i.cmd_process       pstorage.o
-    0x0001f4d8   0x00000014   Code   RO         2099    i.cmd_queue_dequeue  pstorage.o
-    0x0001f4ec   0x00000050   Code   RO         2100    i.cmd_queue_element_init  pstorage.o
-    0x0001f53c   0x0000009c   Code   RO         2101    i.cmd_queue_enqueue  pstorage.o
-    0x0001f5d8   0x00000020   Code   RO         2102    i.cmd_queue_init    pstorage.o
-    0x0001f5f8   0x00000028   Code   RO         2103    i.command_end_procedure_run  pstorage.o
-    0x0001f620   0x0000002c   Code   RO         2104    i.command_queue_element_consume  pstorage.o
-    0x0001f64c   0x00000090   Code   RO         2925    i.compare_reg_update  app_timer.o
-    0x0001f6dc   0x0000005a   Code   RO          869    i.conn_int_check    ble_advdata.o
-    0x0001f736   0x00000068   Code   RO          870    i.conn_int_encode   ble_advdata.o
+    0x0001f2a8   0x00000020   Code   RO         1573    i.channel_free      nrf_drv_gpiote.o
+    0x0001f2c8   0x00000010   Code   RO         1574    i.channel_handler_get  nrf_drv_gpiote.o
+    0x0001f2d8   0x00000080   Code   RO         1575    i.channel_port_alloc  nrf_drv_gpiote.o
+    0x0001f358   0x0000000c   Code   RO         1576    i.channel_port_get  nrf_drv_gpiote.o
+    0x0001f364   0x00000104   Code   RO         2099    i.clear_operation_execute  pstorage.o
+    0x0001f468   0x00000028   Code   RO         2100    i.clear_post_processing_run  pstorage.o
+    0x0001f490   0x00000048   Code   RO         2101    i.cmd_process       pstorage.o
+    0x0001f4d8   0x00000014   Code   RO         2102    i.cmd_queue_dequeue  pstorage.o
+    0x0001f4ec   0x00000050   Code   RO         2103    i.cmd_queue_element_init  pstorage.o
+    0x0001f53c   0x0000009c   Code   RO         2104    i.cmd_queue_enqueue  pstorage.o
+    0x0001f5d8   0x00000020   Code   RO         2105    i.cmd_queue_init    pstorage.o
+    0x0001f5f8   0x00000028   Code   RO         2106    i.command_end_procedure_run  pstorage.o
+    0x0001f620   0x0000002c   Code   RO         2107    i.command_queue_element_consume  pstorage.o
+    0x0001f64c   0x00000090   Code   RO         2919    i.compare_reg_update  app_timer.o
+    0x0001f6dc   0x0000005a   Code   RO          865    i.conn_int_check    ble_advdata.o
+    0x0001f736   0x00000068   Code   RO          866    i.conn_int_encode   ble_advdata.o
     0x0001f79e   0x00000002   PAD
     0x0001f7a0   0x00000024   Code   RO           12    i.conn_params_error_handler  main.o
     0x0001f7c4   0x00000070   Code   RO           13    i.conn_params_init  main.o
-    0x0001f834   0x00000084   Code   RO         1091    i.conn_params_negotiation  ble_conn_params.o
-    0x0001f8b8   0x00000054   Code   RO          812    i.connection_buttons_configure  bsp_btn_ble.o
-    0x0001f90c   0x00000048   Code   RO         1227    i.connection_instance_find  device_manager_peripheral.o
-    0x0001f954   0x00000040   Code   RO         1228    i.connection_instance_init  device_manager_peripheral.o
-    0x0001f994   0x0000007c   Code   RO         2105    i.data_page_erase_state_run  pstorage.o
-    0x0001fa10   0x00000034   Code   RO         2106    i.data_to_swap_write_state_run  pstorage.o
-    0x0001fa44   0x0000008c   Code   RO         2789    i.detection_delay_timeout_handler  app_button.o
-    0x0001fad0   0x000000e0   Code   RO         1229    i.device_context_store  device_manager_peripheral.o
-    0x0001fbb0   0x00000088   Code   RO         1230    i.device_instance_allocate  device_manager_peripheral.o
-    0x0001fc38   0x00000058   Code   RO         1231    i.device_instance_find  device_manager_peripheral.o
-    0x0001fc90   0x0000002c   Code   RO         1232    i.device_instance_free  device_manager_peripheral.o
+    0x0001f834   0x00000084   Code   RO         1090    i.conn_params_negotiation  ble_conn_params.o
+    0x0001f8b8   0x00000054   Code   RO          808    i.connection_buttons_configure  bsp_btn_ble.o
+    0x0001f90c   0x00000048   Code   RO         1230    i.connection_instance_find  device_manager_peripheral.o
+    0x0001f954   0x00000040   Code   RO         1231    i.connection_instance_init  device_manager_peripheral.o
+    0x0001f994   0x0000007c   Code   RO         2108    i.data_page_erase_state_run  pstorage.o
+    0x0001fa10   0x00000034   Code   RO         2109    i.data_to_swap_write_state_run  pstorage.o
+    0x0001fa44   0x0000008c   Code   RO         2783    i.detection_delay_timeout_handler  app_button.o
+    0x0001fad0   0x000000e0   Code   RO         1232    i.device_context_store  device_manager_peripheral.o
+    0x0001fbb0   0x00000088   Code   RO         1233    i.device_instance_allocate  device_manager_peripheral.o
+    0x0001fc38   0x00000058   Code   RO         1234    i.device_instance_find  device_manager_peripheral.o
+    0x0001fc90   0x0000002c   Code   RO         1235    i.device_instance_free  device_manager_peripheral.o
     0x0001fcbc   0x00000038   Code   RO           14    i.device_manager_evt_handler  main.o
     0x0001fcf4   0x000000d4   Code   RO           15    i.device_manager_init  main.o
-    0x0001fdc8   0x000006b8   Code   RO         1237    i.dm_ble_evt_handler  device_manager_peripheral.o
-    0x00020480   0x00000018   Code   RO         1243    i.dm_handle_initialize  device_manager_peripheral.o
-    0x00020498   0x00000108   Code   RO         1244    i.dm_init           device_manager_peripheral.o
-    0x000205a0   0x0000025c   Code   RO         1247    i.dm_pstorage_cb_handler  device_manager_peripheral.o
-    0x000207fc   0x000000b0   Code   RO         1248    i.dm_register       device_manager_peripheral.o
-    0x000208ac   0x00000064   Code   RO         2926    i.elapsed_ticks_acquire  app_timer.o
-    0x00020910   0x00000040   Code   RO         2107    i.erase_sub_state_sm_run  pstorage.o
-    0x00020950   0x00000054   Code   RO         3530    i.errata_108        system_nrf52.o
-    0x000209a4   0x00000054   Code   RO         3531    i.errata_12         system_nrf52.o
-    0x000209f8   0x00000030   Code   RO         3532    i.errata_16         system_nrf52.o
-    0x00020a28   0x00000054   Code   RO         3533    i.errata_31         system_nrf52.o
-    0x00020a7c   0x00000030   Code   RO         3534    i.errata_32         system_nrf52.o
-    0x00020aac   0x00000054   Code   RO         3535    i.errata_36         system_nrf52.o
-    0x00020b00   0x00000030   Code   RO         3536    i.errata_37         system_nrf52.o
-    0x00020b30   0x00000030   Code   RO         3537    i.errata_57         system_nrf52.o
-    0x00020b60   0x00000030   Code   RO         3538    i.errata_66         system_nrf52.o
-    0x00020b90   0x00000058   Code   RO         2927    i.expired_timers_handler  app_timer.o
-    0x00020be8   0x00000018   Code   RO         2712    i.fifo_get          app_fifo.o
-    0x00020c00   0x0000000a   Code   RO         2627    i.fifo_length       app_uart_fifo.o
-    0x00020c0a   0x0000000a   Code   RO         2713    i.fifo_length       app_fifo.o
-    0x00020c14   0x00000012   Code   RO         2714    i.fifo_peek         app_fifo.o
-    0x00020c26   0x00000012   Code   RO         2715    i.fifo_put          app_fifo.o
-    0x00020c38   0x00000036   Code   RO          871    i.flags_encode      ble_advdata.o
-    0x00020c6e   0x00000036   Code   RO          994    i.flash_access_in_progress  ble_advertising.o
-    0x00020ca4   0x0000002c   Code   RO         2108    i.flash_api_err_code_process  pstorage.o
-    0x00020cd0   0x00000044   Code   RO         2109    i.flash_operation_failure_run  pstorage.o
-    0x00020d14   0x00000030   Code   RO         2110    i.flash_operation_success_run  pstorage.o
-    0x00020d44   0x00000010   Code   RO         2111    i.flash_page_erase  pstorage.o
-    0x00020d54   0x0000001c   Code   RO         2112    i.flash_write       pstorage.o
-    0x00020d70   0x00000010   Code   RO         3341    i.fputc             retarget.o
-    0x00020d80   0x00000018   Code   RO         3214    i.fs_queued_op_count_get  fstorage.o
+    0x0001fdc8   0x000006b8   Code   RO         1240    i.dm_ble_evt_handler  device_manager_peripheral.o
+    0x00020480   0x00000018   Code   RO         1246    i.dm_handle_initialize  device_manager_peripheral.o
+    0x00020498   0x00000108   Code   RO         1247    i.dm_init           device_manager_peripheral.o
+    0x000205a0   0x0000025c   Code   RO         1250    i.dm_pstorage_cb_handler  device_manager_peripheral.o
+    0x000207fc   0x000000b0   Code   RO         1251    i.dm_register       device_manager_peripheral.o
+    0x000208ac   0x00000064   Code   RO         2920    i.elapsed_ticks_acquire  app_timer.o
+    0x00020910   0x00000040   Code   RO         2110    i.erase_sub_state_sm_run  pstorage.o
+    0x00020950   0x00000054   Code   RO         3524    i.errata_108        system_nrf52.o
+    0x000209a4   0x00000054   Code   RO         3525    i.errata_12         system_nrf52.o
+    0x000209f8   0x00000030   Code   RO         3526    i.errata_16         system_nrf52.o
+    0x00020a28   0x00000054   Code   RO         3527    i.errata_31         system_nrf52.o
+    0x00020a7c   0x00000030   Code   RO         3528    i.errata_32         system_nrf52.o
+    0x00020aac   0x00000054   Code   RO         3529    i.errata_36         system_nrf52.o
+    0x00020b00   0x00000030   Code   RO         3530    i.errata_37         system_nrf52.o
+    0x00020b30   0x00000030   Code   RO         3531    i.errata_57         system_nrf52.o
+    0x00020b60   0x00000030   Code   RO         3532    i.errata_66         system_nrf52.o
+    0x00020b90   0x00000058   Code   RO         2921    i.expired_timers_handler  app_timer.o
+    0x00020be8   0x00000018   Code   RO         2706    i.fifo_get          app_fifo.o
+    0x00020c00   0x0000000a   Code   RO         2630    i.fifo_length       app_uart_fifo.o
+    0x00020c0a   0x0000000a   Code   RO         2707    i.fifo_length       app_fifo.o
+    0x00020c14   0x00000012   Code   RO         2708    i.fifo_peek         app_fifo.o
+    0x00020c26   0x00000012   Code   RO         2709    i.fifo_put          app_fifo.o
+    0x00020c38   0x00000036   Code   RO          867    i.flags_encode      ble_advdata.o
+    0x00020c6e   0x00000036   Code   RO          993    i.flash_access_in_progress  ble_advertising.o
+    0x00020ca4   0x0000002c   Code   RO         2111    i.flash_api_err_code_process  pstorage.o
+    0x00020cd0   0x00000044   Code   RO         2112    i.flash_operation_failure_run  pstorage.o
+    0x00020d14   0x00000030   Code   RO         2113    i.flash_operation_success_run  pstorage.o
+    0x00020d44   0x00000010   Code   RO         2114    i.flash_page_erase  pstorage.o
+    0x00020d54   0x0000001c   Code   RO         2115    i.flash_write       pstorage.o
+    0x00020d70   0x00000010   Code   RO         3335    i.fputc             retarget.o
+    0x00020d80   0x00000018   Code   RO         3208    i.fs_queued_op_count_get  fstorage.o
     0x00020d98   0x000000a4   Code   RO           16    i.gap_params_init   main.o
-    0x00020e3c   0x00000006   Code   RO         1255    i.gattc_context_apply  device_manager_peripheral.o
-    0x00020e42   0x00000006   Code   RO         1256    i.gattc_context_load  device_manager_peripheral.o
-    0x00020e48   0x00000006   Code   RO         1257    i.gattc_context_store  device_manager_peripheral.o
+    0x00020e3c   0x00000006   Code   RO         1258    i.gattc_context_apply  device_manager_peripheral.o
+    0x00020e42   0x00000006   Code   RO         1259    i.gattc_context_load  device_manager_peripheral.o
+    0x00020e48   0x00000006   Code   RO         1260    i.gattc_context_store  device_manager_peripheral.o
     0x00020e4e   0x00000002   PAD
-    0x00020e50   0x000000f8   Code   RO         1258    i.gatts_context_apply  device_manager_peripheral.o
-    0x00020f48   0x0000004c   Code   RO         1259    i.gatts_context_load  device_manager_peripheral.o
-    0x00020f94   0x000000f0   Code   RO         1260    i.gatts_context_store  device_manager_peripheral.o
-    0x00021084   0x00000018   Code   RO         1261    i.gattsc_context_apply  device_manager_peripheral.o
-    0x0002109c   0x0000001c   Code   RO         1262    i.gattsc_context_load  device_manager_peripheral.o
-    0x000210b8   0x0000001c   Code   RO         1263    i.gattsc_context_store  device_manager_peripheral.o
-    0x000210d4   0x00000080   Code   RO         2790    i.gpiote_event_handler  app_button.o
-    0x00021154   0x00000068   Code   RO         2113    i.head_restore_state_run  pstorage.o
+    0x00020e50   0x000000f8   Code   RO         1261    i.gatts_context_apply  device_manager_peripheral.o
+    0x00020f48   0x0000004c   Code   RO         1262    i.gatts_context_load  device_manager_peripheral.o
+    0x00020f94   0x000000f0   Code   RO         1263    i.gatts_context_store  device_manager_peripheral.o
+    0x00021084   0x00000018   Code   RO         1264    i.gattsc_context_apply  device_manager_peripheral.o
+    0x0002109c   0x0000001c   Code   RO         1265    i.gattsc_context_load  device_manager_peripheral.o
+    0x000210b8   0x0000001c   Code   RO         1266    i.gattsc_context_store  device_manager_peripheral.o
+    0x000210d4   0x00000080   Code   RO         2784    i.gpiote_event_handler  app_button.o
+    0x00021154   0x00000068   Code   RO         2116    i.head_restore_state_run  pstorage.o
     0x000211bc   0x00000084   Code   RO          396    i.hrs_service_init  our_service.o
     0x00021240   0x00000044   Code   RO          397    i.hrs_value_update  our_service.o
-    0x00021284   0x000000b0   Code   RO         3411    i.intern_softdevice_events_execute  softdevice_handler.o
-    0x00021334   0x000000da   Code   RO         2431    i.irq_handler_twi   nrf_drv_twi.o
+    0x00021284   0x000000b0   Code   RO         3405    i.intern_softdevice_events_execute  softdevice_handler.o
+    0x00021334   0x000000da   Code   RO         2434    i.irq_handler_twi   nrf_drv_twi.o
     0x0002140e   0x00000002   PAD
-    0x00021410   0x00000024   Code   RO         1092    i.is_conn_params_ok  ble_conn_params.o
-    0x00021434   0x00000058   Code   RO         2114    i.is_page_erase_required  pstorage.o
-    0x0002148c   0x00000050   Code   RO         2115    i.is_tail_data_page_swap_required  pstorage.o
-    0x000214dc   0x00000010   Code   RO         2116    i.is_word_aligned   pstorage.o
-    0x000214ec   0x0000006a   Code   RO          872    i.le_role_encode    ble_advdata.o
+    0x00021410   0x00000024   Code   RO         1091    i.is_conn_params_ok  ble_conn_params.o
+    0x00021434   0x00000058   Code   RO         2117    i.is_page_erase_required  pstorage.o
+    0x0002148c   0x00000050   Code   RO         2118    i.is_tail_data_page_swap_required  pstorage.o
+    0x000214dc   0x00000010   Code   RO         2119    i.is_word_aligned   pstorage.o
+    0x000214ec   0x0000006a   Code   RO          868    i.le_role_encode    ble_advdata.o
     0x00021556   0x00000002   PAD
-    0x00021558   0x00000020   Code   RO          704    i.leds_timer_handler  bsp.o
-    0x00021578   0x00000098   Code   RO         2928    i.list_deletions_handler  app_timer.o
-    0x00021610   0x0000010c   Code   RO         2929    i.list_insertions_handler  app_timer.o
+    0x00021558   0x00000020   Code   RO          707    i.leds_timer_handler  bsp.o
+    0x00021578   0x00000098   Code   RO         2922    i.list_deletions_handler  app_timer.o
+    0x00021610   0x0000010c   Code   RO         2923    i.list_insertions_handler  app_timer.o
     0x0002171c   0x00000108   Code   RO           17    i.main              main.o
-    0x00021824   0x00000020   Code   RO         2117    i.main_state_err_busy_process  pstorage.o
-    0x00021844   0x00000076   Code   RO          873    i.manuf_specific_data_encode  ble_advdata.o
-    0x000218ba   0x000000c2   Code   RO          874    i.name_encode       ble_advdata.o
-    0x0002197c   0x00000006   Code   RO         1264    i.no_service_context_apply  device_manager_peripheral.o
-    0x00021982   0x00000006   Code   RO         1265    i.no_service_context_load  device_manager_peripheral.o
-    0x00021988   0x00000006   Code   RO         1266    i.no_service_context_store  device_manager_peripheral.o
-    0x0002198e   0x0000001a   Code   RO         1500    i.nrf_delay_ms      nrf_delay.o
-    0x000219a8   0x00000060   Code   RO         1531    i.nrf_drv_common_irq_enable  nrf_drv_common.o
-    0x00021a08   0x0000000a   Code   RO         2432    i.nrf_drv_get_IRQn  nrf_drv_twi.o
+    0x00021824   0x00000020   Code   RO         2120    i.main_state_err_busy_process  pstorage.o
+    0x00021844   0x00000076   Code   RO          869    i.manuf_specific_data_encode  ble_advdata.o
+    0x000218ba   0x000000c2   Code   RO          870    i.name_encode       ble_advdata.o
+    0x0002197c   0x00000006   Code   RO         1267    i.no_service_context_apply  device_manager_peripheral.o
+    0x00021982   0x00000006   Code   RO         1268    i.no_service_context_load  device_manager_peripheral.o
+    0x00021988   0x00000006   Code   RO         1269    i.no_service_context_store  device_manager_peripheral.o
+    0x0002198e   0x0000001a   Code   RO         1503    i.nrf_delay_ms      nrf_delay.o
+    0x000219a8   0x00000060   Code   RO         1534    i.nrf_drv_common_irq_enable  nrf_drv_common.o
+    0x00021a08   0x0000000a   Code   RO         2435    i.nrf_drv_get_IRQn  nrf_drv_twi.o
     0x00021a12   0x00000002   PAD
-    0x00021a14   0x000000b8   Code   RO         1576    i.nrf_drv_gpiote_in_event_enable  nrf_drv_gpiote.o
-    0x00021acc   0x000000d8   Code   RO         1577    i.nrf_drv_gpiote_in_init  nrf_drv_gpiote.o
-    0x00021ba4   0x0000001c   Code   RO         1578    i.nrf_drv_gpiote_in_is_set  nrf_drv_gpiote.o
-    0x00021bc0   0x00000054   Code   RO         1580    i.nrf_drv_gpiote_init  nrf_drv_gpiote.o
-    0x00021c14   0x00000014   Code   RO         1581    i.nrf_drv_gpiote_is_init  nrf_drv_gpiote.o
-    0x00021c28   0x00000024   Code   RO         2435    i.nrf_drv_twi_enable  nrf_drv_twi.o
-    0x00021c4c   0x0000009c   Code   RO         2436    i.nrf_drv_twi_init  nrf_drv_twi.o
-    0x00021ce8   0x0000002c   Code   RO         2437    i.nrf_drv_twi_rx    nrf_drv_twi.o
-    0x00021d14   0x0000003c   Code   RO         2440    i.nrf_drv_twi_tx    nrf_drv_twi.o
-    0x00021d50   0x0000003c   Code   RO         2442    i.nrf_drv_twi_xfer  nrf_drv_twi.o
-    0x00021d8c   0x000000e4   Code   RO         1811    i.nrf_drv_uart_init  nrf_drv_uart.o
-    0x00021e70   0x000000b0   Code   RO         1812    i.nrf_drv_uart_rx   nrf_drv_uart.o
-    0x00021f20   0x00000020   Code   RO         1815    i.nrf_drv_uart_rx_enable  nrf_drv_uart.o
-    0x00021f40   0x000000b4   Code   RO         1816    i.nrf_drv_uart_rx_for_uart  nrf_drv_uart.o
-    0x00021ff4   0x000000b4   Code   RO         1817    i.nrf_drv_uart_rx_for_uarte  nrf_drv_uart.o
-    0x000220a8   0x00000048   Code   RO         1818    i.nrf_drv_uart_tx   nrf_drv_uart.o
-    0x000220f0   0x0000008c   Code   RO         1820    i.nrf_drv_uart_tx_for_uart  nrf_drv_uart.o
-    0x0002217c   0x00000070   Code   RO         1821    i.nrf_drv_uart_tx_for_uarte  nrf_drv_uart.o
-    0x000221ec   0x00000014   Code   RO         1822    i.nrf_drv_uart_tx_in_progress  nrf_drv_uart.o
-    0x00022200   0x00000024   Code   RO         1593    i.nrf_gpio_cfg      nrf_drv_gpiote.o
-    0x00022224   0x00000024   Code   RO         1824    i.nrf_gpio_cfg      nrf_drv_uart.o
-    0x00022248   0x0000001a   Code   RO         1826    i.nrf_gpio_cfg_input  nrf_drv_uart.o
-    0x00022262   0x00000018   Code   RO         1827    i.nrf_gpio_cfg_output  nrf_drv_uart.o
+    0x00021a14   0x000000b8   Code   RO         1579    i.nrf_drv_gpiote_in_event_enable  nrf_drv_gpiote.o
+    0x00021acc   0x000000d8   Code   RO         1580    i.nrf_drv_gpiote_in_init  nrf_drv_gpiote.o
+    0x00021ba4   0x0000001c   Code   RO         1581    i.nrf_drv_gpiote_in_is_set  nrf_drv_gpiote.o
+    0x00021bc0   0x00000054   Code   RO         1583    i.nrf_drv_gpiote_init  nrf_drv_gpiote.o
+    0x00021c14   0x00000014   Code   RO         1584    i.nrf_drv_gpiote_is_init  nrf_drv_gpiote.o
+    0x00021c28   0x00000024   Code   RO         2438    i.nrf_drv_twi_enable  nrf_drv_twi.o
+    0x00021c4c   0x0000009c   Code   RO         2439    i.nrf_drv_twi_init  nrf_drv_twi.o
+    0x00021ce8   0x0000002c   Code   RO         2440    i.nrf_drv_twi_rx    nrf_drv_twi.o
+    0x00021d14   0x0000003c   Code   RO         2443    i.nrf_drv_twi_tx    nrf_drv_twi.o
+    0x00021d50   0x0000003c   Code   RO         2445    i.nrf_drv_twi_xfer  nrf_drv_twi.o
+    0x00021d8c   0x000000e4   Code   RO         1814    i.nrf_drv_uart_init  nrf_drv_uart.o
+    0x00021e70   0x000000b0   Code   RO         1815    i.nrf_drv_uart_rx   nrf_drv_uart.o
+    0x00021f20   0x00000020   Code   RO         1818    i.nrf_drv_uart_rx_enable  nrf_drv_uart.o
+    0x00021f40   0x000000b4   Code   RO         1819    i.nrf_drv_uart_rx_for_uart  nrf_drv_uart.o
+    0x00021ff4   0x000000b4   Code   RO         1820    i.nrf_drv_uart_rx_for_uarte  nrf_drv_uart.o
+    0x000220a8   0x00000048   Code   RO         1821    i.nrf_drv_uart_tx   nrf_drv_uart.o
+    0x000220f0   0x0000008c   Code   RO         1823    i.nrf_drv_uart_tx_for_uart  nrf_drv_uart.o
+    0x0002217c   0x00000070   Code   RO         1824    i.nrf_drv_uart_tx_for_uarte  nrf_drv_uart.o
+    0x000221ec   0x00000014   Code   RO         1825    i.nrf_drv_uart_tx_in_progress  nrf_drv_uart.o
+    0x00022200   0x00000024   Code   RO         1596    i.nrf_gpio_cfg      nrf_drv_gpiote.o
+    0x00022224   0x00000024   Code   RO         1827    i.nrf_gpio_cfg      nrf_drv_uart.o
+    0x00022248   0x0000001a   Code   RO         1829    i.nrf_gpio_cfg_input  nrf_drv_uart.o
+    0x00022262   0x00000018   Code   RO         1830    i.nrf_gpio_cfg_output  nrf_drv_uart.o
     0x0002227a   0x00000002   PAD
-    0x0002227c   0x00000024   Code   RO         1595    i.nrf_gpio_cfg_sense_set  nrf_drv_gpiote.o
-    0x000222a0   0x00000010   Code   RO         2443    i.nrf_gpio_pin_clear  nrf_drv_twi.o
-    0x000222b0   0x00000010   Code   RO         1828    i.nrf_gpio_pin_set  nrf_drv_uart.o
-    0x000222c0   0x00000010   Code   RO         2444    i.nrf_gpio_pin_set  nrf_drv_twi.o
-    0x000222d0   0x0000000c   Code   RO         1598    i.nrf_gpiote_event_addr_get  nrf_drv_gpiote.o
-    0x000222dc   0x0000001c   Code   RO         1599    i.nrf_gpiote_event_clear  nrf_drv_gpiote.o
-    0x000222f8   0x00000016   Code   RO         1600    i.nrf_gpiote_event_is_set  nrf_drv_gpiote.o
+    0x0002227c   0x00000024   Code   RO         1598    i.nrf_gpio_cfg_sense_set  nrf_drv_gpiote.o
+    0x000222a0   0x00000010   Code   RO         2446    i.nrf_gpio_pin_clear  nrf_drv_twi.o
+    0x000222b0   0x00000010   Code   RO         1831    i.nrf_gpio_pin_set  nrf_drv_uart.o
+    0x000222c0   0x00000010   Code   RO         2447    i.nrf_gpio_pin_set  nrf_drv_twi.o
+    0x000222d0   0x0000000c   Code   RO         1601    i.nrf_gpiote_event_addr_get  nrf_drv_gpiote.o
+    0x000222dc   0x0000001c   Code   RO         1602    i.nrf_gpiote_event_clear  nrf_drv_gpiote.o
+    0x000222f8   0x00000016   Code   RO         1603    i.nrf_gpiote_event_is_set  nrf_drv_gpiote.o
     0x0002230e   0x00000002   PAD
-    0x00022310   0x0000000c   Code   RO         1601    i.nrf_gpiote_int_enable  nrf_drv_gpiote.o
-    0x0002231c   0x0000000e   Code   RO         2445    i.nrf_twi_event_check  nrf_drv_twi.o
-    0x0002232a   0x00000006   Code   RO         2446    i.nrf_twi_event_clear  nrf_drv_twi.o
-    0x00022330   0x00000006   Code   RO         2447    i.nrf_twi_int_disable  nrf_drv_twi.o
-    0x00022336   0x00000006   Code   RO         2448    i.nrf_twi_int_enable  nrf_drv_twi.o
-    0x0002233c   0x00000006   Code   RO         2449    i.nrf_twi_shorts_set  nrf_drv_twi.o
-    0x00022342   0x00000006   Code   RO         2450    i.nrf_twi_task_trigger  nrf_drv_twi.o
-    0x00022348   0x0000000c   Code   RO         1829    i.nrf_uart_errorsrc_get_and_clear  nrf_drv_uart.o
-    0x00022354   0x0000000e   Code   RO         1830    i.nrf_uart_event_check  nrf_drv_uart.o
-    0x00022362   0x00000006   Code   RO         1831    i.nrf_uart_event_clear  nrf_drv_uart.o
-    0x00022368   0x0000000a   Code   RO         1832    i.nrf_uart_hwfc_pins_set  nrf_drv_uart.o
-    0x00022372   0x00000006   Code   RO         1833    i.nrf_uart_int_disable  nrf_drv_uart.o
-    0x00022378   0x00000006   Code   RO         1834    i.nrf_uart_int_enable  nrf_drv_uart.o
-    0x0002237e   0x00000012   Code   RO         1835    i.nrf_uart_int_enable_check  nrf_drv_uart.o
-    0x00022390   0x00000006   Code   RO         1836    i.nrf_uart_task_trigger  nrf_drv_uart.o
-    0x00022396   0x0000000a   Code   RO         1837    i.nrf_uart_txrx_pins_set  nrf_drv_uart.o
-    0x000223a0   0x0000000c   Code   RO         1838    i.nrf_uarte_errorsrc_get_and_clear  nrf_drv_uart.o
-    0x000223ac   0x0000000e   Code   RO         1839    i.nrf_uarte_event_check  nrf_drv_uart.o
-    0x000223ba   0x00000006   Code   RO         1840    i.nrf_uarte_event_clear  nrf_drv_uart.o
-    0x000223c0   0x0000000c   Code   RO         1841    i.nrf_uarte_hwfc_pins_set  nrf_drv_uart.o
-    0x000223cc   0x00000006   Code   RO         1842    i.nrf_uarte_int_disable  nrf_drv_uart.o
-    0x000223d2   0x00000006   Code   RO         1843    i.nrf_uarte_int_enable  nrf_drv_uart.o
-    0x000223d8   0x0000000a   Code   RO         1844    i.nrf_uarte_rx_amount_get  nrf_drv_uart.o
-    0x000223e2   0x00000006   Code   RO         1845    i.nrf_uarte_task_trigger  nrf_drv_uart.o
-    0x000223e8   0x0000000e   Code   RO         1846    i.nrf_uarte_txrx_pins_set  nrf_drv_uart.o
+    0x00022310   0x0000000c   Code   RO         1604    i.nrf_gpiote_int_enable  nrf_drv_gpiote.o
+    0x0002231c   0x0000000e   Code   RO         2448    i.nrf_twi_event_check  nrf_drv_twi.o
+    0x0002232a   0x00000006   Code   RO         2449    i.nrf_twi_event_clear  nrf_drv_twi.o
+    0x00022330   0x00000006   Code   RO         2450    i.nrf_twi_int_disable  nrf_drv_twi.o
+    0x00022336   0x00000006   Code   RO         2451    i.nrf_twi_int_enable  nrf_drv_twi.o
+    0x0002233c   0x00000006   Code   RO         2452    i.nrf_twi_shorts_set  nrf_drv_twi.o
+    0x00022342   0x00000006   Code   RO         2453    i.nrf_twi_task_trigger  nrf_drv_twi.o
+    0x00022348   0x0000000c   Code   RO         1832    i.nrf_uart_errorsrc_get_and_clear  nrf_drv_uart.o
+    0x00022354   0x0000000e   Code   RO         1833    i.nrf_uart_event_check  nrf_drv_uart.o
+    0x00022362   0x00000006   Code   RO         1834    i.nrf_uart_event_clear  nrf_drv_uart.o
+    0x00022368   0x0000000a   Code   RO         1835    i.nrf_uart_hwfc_pins_set  nrf_drv_uart.o
+    0x00022372   0x00000006   Code   RO         1836    i.nrf_uart_int_disable  nrf_drv_uart.o
+    0x00022378   0x00000006   Code   RO         1837    i.nrf_uart_int_enable  nrf_drv_uart.o
+    0x0002237e   0x00000012   Code   RO         1838    i.nrf_uart_int_enable_check  nrf_drv_uart.o
+    0x00022390   0x00000006   Code   RO         1839    i.nrf_uart_task_trigger  nrf_drv_uart.o
+    0x00022396   0x0000000a   Code   RO         1840    i.nrf_uart_txrx_pins_set  nrf_drv_uart.o
+    0x000223a0   0x0000000c   Code   RO         1841    i.nrf_uarte_errorsrc_get_and_clear  nrf_drv_uart.o
+    0x000223ac   0x0000000e   Code   RO         1842    i.nrf_uarte_event_check  nrf_drv_uart.o
+    0x000223ba   0x00000006   Code   RO         1843    i.nrf_uarte_event_clear  nrf_drv_uart.o
+    0x000223c0   0x0000000c   Code   RO         1844    i.nrf_uarte_hwfc_pins_set  nrf_drv_uart.o
+    0x000223cc   0x00000006   Code   RO         1845    i.nrf_uarte_int_disable  nrf_drv_uart.o
+    0x000223d2   0x00000006   Code   RO         1846    i.nrf_uarte_int_enable  nrf_drv_uart.o
+    0x000223d8   0x0000000a   Code   RO         1847    i.nrf_uarte_rx_amount_get  nrf_drv_uart.o
+    0x000223e2   0x00000006   Code   RO         1848    i.nrf_uarte_task_trigger  nrf_drv_uart.o
+    0x000223e8   0x0000000e   Code   RO         1849    i.nrf_uarte_txrx_pins_set  nrf_drv_uart.o
     0x000223f6   0x00000002   PAD
     0x000223f8   0x00000048   Code   RO           18    i.on_adv_evt        main.o
     0x00022440   0x00000078   Code   RO           19    i.on_ble_evt        main.o
     0x000224b8   0x00000040   Code   RO           20    i.on_conn_params_evt  main.o
-    0x000224f8   0x00000018   Code   RO         1093    i.on_conn_params_update  ble_conn_params.o
-    0x00022510   0x00000038   Code   RO         1094    i.on_connect        ble_conn_params.o
-    0x00022548   0x00000040   Code   RO         1095    i.on_disconnect     ble_conn_params.o
-    0x00022588   0x00000058   Code   RO         1096    i.on_write          ble_conn_params.o
-    0x000225e0   0x00000018   Code   RO          995    i.peer_address_exists  ble_advertising.o
-    0x000225f8   0x00000064   Code   RO         1267    i.peer_instance_init  device_manager_peripheral.o
-    0x0002265c   0x0000001c   Code   RO         1603    i.pin_in_use_by_gpiote  nrf_drv_gpiote.o
-    0x00022678   0x00000018   Code   RO         1604    i.pin_in_use_by_port  nrf_drv_gpiote.o
-    0x00022690   0x00000020   Code   RO         1605    i.pin_in_use_by_te  nrf_drv_gpiote.o
-    0x000226b0   0x0000000c   Code   RO         1606    i.pin_in_use_clear  nrf_drv_gpiote.o
+    0x000224f8   0x00000018   Code   RO         1092    i.on_conn_params_update  ble_conn_params.o
+    0x00022510   0x00000038   Code   RO         1093    i.on_connect        ble_conn_params.o
+    0x00022548   0x00000040   Code   RO         1094    i.on_disconnect     ble_conn_params.o
+    0x00022588   0x00000058   Code   RO         1095    i.on_write          ble_conn_params.o
+    0x000225e0   0x00000018   Code   RO          994    i.peer_address_exists  ble_advertising.o
+    0x000225f8   0x00000064   Code   RO         1270    i.peer_instance_init  device_manager_peripheral.o
+    0x0002265c   0x0000001c   Code   RO         1606    i.pin_in_use_by_gpiote  nrf_drv_gpiote.o
+    0x00022678   0x00000018   Code   RO         1607    i.pin_in_use_by_port  nrf_drv_gpiote.o
+    0x00022690   0x00000020   Code   RO         1608    i.pin_in_use_by_te  nrf_drv_gpiote.o
+    0x000226b0   0x0000000c   Code   RO         1609    i.pin_in_use_clear  nrf_drv_gpiote.o
     0x000226bc   0x00000030   Code   RO           21    i.power_manage      main.o
-    0x000226ec   0x0000002c   Code   RO         2118    i.pstorage_access_status_get  pstorage.o
-    0x00022718   0x000000a4   Code   RO         2119    i.pstorage_block_identifier_get  pstorage.o
-    0x000227bc   0x00000120   Code   RO         2120    i.pstorage_clear    pstorage.o
-    0x000228dc   0x0000001e   Code   RO         2121    i.pstorage_flash_page_end  pstorage.o
-    0x000228fa   0x0000000a   Code   RO         2122    i.pstorage_flash_page_size  pstorage.o
-    0x00022904   0x00000090   Code   RO         2123    i.pstorage_init     pstorage.o
-    0x00022994   0x000000f4   Code   RO         2124    i.pstorage_load     pstorage.o
-    0x00022a88   0x00000110   Code   RO         2125    i.pstorage_register  pstorage.o
-    0x00022b98   0x000000dc   Code   RO         2126    i.pstorage_store    pstorage.o
-    0x00022c74   0x00000048   Code   RO         2127    i.pstorage_sys_event_handler  pstorage.o
-    0x00022cbc   0x000000dc   Code   RO         2128    i.pstorage_update   pstorage.o
-    0x00022d98   0x0000000c   Code   RO         2930    i.rtc1_compare0_set  app_timer.o
-    0x00022da4   0x0000000c   Code   RO         2931    i.rtc1_counter_get  app_timer.o
-    0x00022db0   0x00000018   Code   RO         2932    i.rtc1_init         app_timer.o
-    0x00022dc8   0x0000003c   Code   RO         2933    i.rtc1_start        app_timer.o
-    0x00022e04   0x00000058   Code   RO         2934    i.rtc1_stop         app_timer.o
-    0x00022e5c   0x00000050   Code   RO         1848    i.rx_byte           nrf_drv_uart.o
-    0x00022eac   0x00000024   Code   RO         1849    i.rx_done_event     nrf_drv_uart.o
-    0x00022ed0   0x00000024   Code   RO         1850    i.rx_enable         nrf_drv_uart.o
-    0x00022ef4   0x0000001c   Code   RO         3412    i.sd_check_ram_start  softdevice_handler.o
-    0x00022f10   0x000000d0   Code   RO         3413    i.sd_nvic_EnableIRQ  softdevice_handler.o
-    0x00022fe0   0x00000036   Code   RO          875    i.sec_mgr_oob_flags_encode  ble_advdata.o
-    0x00023016   0x00000096   Code   RO          876    i.service_data_encode  ble_advdata.o
+    0x000226ec   0x0000002c   Code   RO         2121    i.pstorage_access_status_get  pstorage.o
+    0x00022718   0x000000a4   Code   RO         2122    i.pstorage_block_identifier_get  pstorage.o
+    0x000227bc   0x00000120   Code   RO         2123    i.pstorage_clear    pstorage.o
+    0x000228dc   0x0000001e   Code   RO         2124    i.pstorage_flash_page_end  pstorage.o
+    0x000228fa   0x0000000a   Code   RO         2125    i.pstorage_flash_page_size  pstorage.o
+    0x00022904   0x00000090   Code   RO         2126    i.pstorage_init     pstorage.o
+    0x00022994   0x000000f4   Code   RO         2127    i.pstorage_load     pstorage.o
+    0x00022a88   0x00000110   Code   RO         2128    i.pstorage_register  pstorage.o
+    0x00022b98   0x000000dc   Code   RO         2129    i.pstorage_store    pstorage.o
+    0x00022c74   0x00000048   Code   RO         2130    i.pstorage_sys_event_handler  pstorage.o
+    0x00022cbc   0x000000dc   Code   RO         2131    i.pstorage_update   pstorage.o
+    0x00022d98   0x0000000c   Code   RO         2924    i.rtc1_compare0_set  app_timer.o
+    0x00022da4   0x0000000c   Code   RO         2925    i.rtc1_counter_get  app_timer.o
+    0x00022db0   0x00000018   Code   RO         2926    i.rtc1_init         app_timer.o
+    0x00022dc8   0x0000003c   Code   RO         2927    i.rtc1_start        app_timer.o
+    0x00022e04   0x00000058   Code   RO         2928    i.rtc1_stop         app_timer.o
+    0x00022e5c   0x00000050   Code   RO         1851    i.rx_byte           nrf_drv_uart.o
+    0x00022eac   0x00000024   Code   RO         1852    i.rx_done_event     nrf_drv_uart.o
+    0x00022ed0   0x00000024   Code   RO         1853    i.rx_enable         nrf_drv_uart.o
+    0x00022ef4   0x0000001c   Code   RO         3406    i.sd_check_ram_start  softdevice_handler.o
+    0x00022f10   0x000000d0   Code   RO         3407    i.sd_nvic_EnableIRQ  softdevice_handler.o
+    0x00022fe0   0x00000036   Code   RO          871    i.sec_mgr_oob_flags_encode  ble_advdata.o
+    0x00023016   0x00000096   Code   RO          872    i.service_data_encode  ble_advdata.o
     0x000230ac   0x00000018   Code   RO           22    i.services_init     main.o
     0x000230c4   0x00000070   Code   RO           23    i.sleep_mode_enter  main.o
-    0x00023134   0x00000014   Code   RO         2129    i.sm_state_change   pstorage.o
-    0x00023148   0x00000018   Code   RO         3414    i.softdevice_ble_evt_handler_set  softdevice_handler.o
-    0x00023160   0x0000001c   Code   RO         3415    i.softdevice_enable  softdevice_handler.o
-    0x0002317c   0x0000002c   Code   RO         3416    i.softdevice_enable_get_default_config  softdevice_handler.o
-    0x000231a8   0x00000014   Code   RO         3417    i.softdevice_fault_handler  softdevice_handler.o
-    0x000231bc   0x00000064   Code   RO         3418    i.softdevice_handler_init  softdevice_handler.o
-    0x00023220   0x00000018   Code   RO         3421    i.softdevice_sys_evt_handler_set  softdevice_handler.o
-    0x00023238   0x0000000e   Code   RO          877    i.srdata_check      ble_advdata.o
-    0x00023246   0x0000004c   Code   RO          813    i.startup_event_extract  bsp_btn_ble.o
+    0x00023134   0x00000014   Code   RO         2132    i.sm_state_change   pstorage.o
+    0x00023148   0x00000018   Code   RO         3408    i.softdevice_ble_evt_handler_set  softdevice_handler.o
+    0x00023160   0x0000001c   Code   RO         3409    i.softdevice_enable  softdevice_handler.o
+    0x0002317c   0x0000002c   Code   RO         3410    i.softdevice_enable_get_default_config  softdevice_handler.o
+    0x000231a8   0x00000014   Code   RO         3411    i.softdevice_fault_handler  softdevice_handler.o
+    0x000231bc   0x00000064   Code   RO         3412    i.softdevice_handler_init  softdevice_handler.o
+    0x00023220   0x00000018   Code   RO         3415    i.softdevice_sys_evt_handler_set  softdevice_handler.o
+    0x00023238   0x0000000e   Code   RO          873    i.srdata_check      ble_advdata.o
+    0x00023246   0x0000004c   Code   RO          809    i.startup_event_extract  bsp_btn_ble.o
     0x00023292   0x00000002   PAD
-    0x00023294   0x00000010   Code   RO         2130    i.state_data_erase_entry_run  pstorage.o
-    0x000232a4   0x0000008c   Code   RO         2131    i.state_data_erase_swap_entry_run  pstorage.o
-    0x00023330   0x00000038   Code   RO         2132    i.state_entry_action_run  pstorage.o
-    0x00023368   0x00000010   Code   RO         2133    i.state_erase_data_page_entry_run  pstorage.o
-    0x00023378   0x0000001c   Code   RO         2134    i.state_idle_entry_run  pstorage.o
-    0x00023394   0x00000034   Code   RO         2135    i.state_restore_head_entry_run  pstorage.o
-    0x000233c8   0x00000058   Code   RO         2136    i.state_restore_tail_entry_run  pstorage.o
-    0x00023420   0x00000008   Code   RO         2137    i.state_store_entry_run  pstorage.o
-    0x00023428   0x0000001e   Code   RO         2138    i.state_swap_erase_entry_run  pstorage.o
+    0x00023294   0x00000010   Code   RO         2133    i.state_data_erase_entry_run  pstorage.o
+    0x000232a4   0x0000008c   Code   RO         2134    i.state_data_erase_swap_entry_run  pstorage.o
+    0x00023330   0x00000038   Code   RO         2135    i.state_entry_action_run  pstorage.o
+    0x00023368   0x00000010   Code   RO         2136    i.state_erase_data_page_entry_run  pstorage.o
+    0x00023378   0x0000001c   Code   RO         2137    i.state_idle_entry_run  pstorage.o
+    0x00023394   0x00000034   Code   RO         2138    i.state_restore_head_entry_run  pstorage.o
+    0x000233c8   0x00000058   Code   RO         2139    i.state_restore_tail_entry_run  pstorage.o
+    0x00023420   0x00000008   Code   RO         2140    i.state_store_entry_run  pstorage.o
+    0x00023428   0x0000001e   Code   RO         2141    i.state_swap_erase_entry_run  pstorage.o
     0x00023446   0x00000002   PAD
-    0x00023448   0x00000038   Code   RO         2139    i.state_write_data_swap_entry_run  pstorage.o
-    0x00023480   0x00000008   Code   RO         1268    i.storage_operation_dummy_handler  device_manager_peripheral.o
-    0x00023488   0x00000068   Code   RO         2140    i.store_cmd_flash_write_execute  pstorage.o
-    0x000234f0   0x0000000a   Code   RO         2141    i.store_operation_execute  pstorage.o
+    0x00023448   0x00000038   Code   RO         2142    i.state_write_data_swap_entry_run  pstorage.o
+    0x00023480   0x00000008   Code   RO         1271    i.storage_operation_dummy_handler  device_manager_peripheral.o
+    0x00023488   0x00000068   Code   RO         2143    i.store_cmd_flash_write_execute  pstorage.o
+    0x000234f0   0x0000000a   Code   RO         2144    i.store_operation_execute  pstorage.o
     0x000234fa   0x00000002   PAD
-    0x000234fc   0x00000048   Code   RO         2142    i.store_sub_state_sm_run  pstorage.o
-    0x00023544   0x00000020   Code   RO         2143    i.swap_erase_state_run  pstorage.o
-    0x00023564   0x00000008   Code   RO         2144    i.swap_sub_sm_exit_action_run  pstorage.o
-    0x0002356c   0x00000018   Code   RO         2145    i.swap_sub_state_entry_action_run  pstorage.o
-    0x00023584   0x00000020   Code   RO         2146    i.swap_sub_state_err_busy_process  pstorage.o
-    0x000235a4   0x00000018   Code   RO         2147    i.swap_sub_state_sm_run  pstorage.o
-    0x000235bc   0x00000014   Code   RO         2148    i.swap_sub_state_state_change  pstorage.o
+    0x000234fc   0x00000048   Code   RO         2145    i.store_sub_state_sm_run  pstorage.o
+    0x00023544   0x00000020   Code   RO         2146    i.swap_erase_state_run  pstorage.o
+    0x00023564   0x00000008   Code   RO         2147    i.swap_sub_sm_exit_action_run  pstorage.o
+    0x0002356c   0x00000018   Code   RO         2148    i.swap_sub_state_entry_action_run  pstorage.o
+    0x00023584   0x00000020   Code   RO         2149    i.swap_sub_state_err_busy_process  pstorage.o
+    0x000235a4   0x00000018   Code   RO         2150    i.swap_sub_state_sm_run  pstorage.o
+    0x000235bc   0x00000014   Code   RO         2151    i.swap_sub_state_state_change  pstorage.o
     0x000235d0   0x00000012   Code   RO           24    i.sys_evt_dispatch  main.o
     0x000235e2   0x00000002   PAD
-    0x000235e4   0x0000001c   Code   RO         2149    i.tail_restore_state_run  pstorage.o
-    0x00023600   0x0000004c   Code   RO         2150    i.tail_word_size_calculate  pstorage.o
-    0x0002364c   0x0000000a   Code   RO         2935    i.ticks_diff_get    app_timer.o
+    0x000235e4   0x0000001c   Code   RO         2152    i.tail_restore_state_run  pstorage.o
+    0x00023600   0x0000004c   Code   RO         2153    i.tail_word_size_calculate  pstorage.o
+    0x0002364c   0x0000000a   Code   RO         2929    i.ticks_diff_get    app_timer.o
     0x00023656   0x00000002   PAD
-    0x00023658   0x00000078   Code   RO         2936    i.timeout_handler_exec  app_timer.o
-    0x000236d0   0x00000054   Code   RO         2937    i.timer_list_handler  app_timer.o
-    0x00023724   0x0000000a   Code   RO         2938    i.timer_list_handler_sched  app_timer.o
+    0x00023658   0x00000078   Code   RO         2930    i.timeout_handler_exec  app_timer.o
+    0x000236d0   0x00000054   Code   RO         2931    i.timer_list_handler  app_timer.o
+    0x00023724   0x0000000a   Code   RO         2932    i.timer_list_handler_sched  app_timer.o
     0x0002372e   0x00000002   PAD
-    0x00023730   0x00000068   Code   RO         2939    i.timer_list_insert  app_timer.o
-    0x00023798   0x0000006c   Code   RO         2940    i.timer_list_remove  app_timer.o
-    0x00023804   0x0000005c   Code   RO         2941    i.timer_start_op_schedule  app_timer.o
-    0x00023860   0x00000040   Code   RO         2943    i.timer_stop_op_schedule  app_timer.o
+    0x00023730   0x00000068   Code   RO         2933    i.timer_list_insert  app_timer.o
+    0x00023798   0x0000006c   Code   RO         2934    i.timer_list_remove  app_timer.o
+    0x00023804   0x0000005c   Code   RO         2935    i.timer_start_op_schedule  app_timer.o
+    0x00023860   0x00000040   Code   RO         2937    i.timer_stop_op_schedule  app_timer.o
     0x000238a0   0x000000bc   Code   RO           25    i.timer_timeout_handler  main.o
-    0x0002395c   0x00000098   Code   RO         2944    i.timer_timeouts_check  app_timer.o
-    0x000239f4   0x0000000a   Code   RO         2945    i.timer_timeouts_check_sched  app_timer.o
+    0x0002395c   0x00000098   Code   RO         2938    i.timer_timeouts_check  app_timer.o
+    0x000239f4   0x0000000a   Code   RO         2939    i.timer_timeouts_check_sched  app_timer.o
     0x000239fe   0x00000002   PAD
     0x00023a00   0x00000054   Code   RO           26    i.timers_init       main.o
-    0x00023a54   0x00000046   Code   RO          878    i.tk_value_encode   ble_advdata.o
+    0x00023a54   0x00000046   Code   RO          874    i.tk_value_encode   ble_advdata.o
     0x00023a9a   0x00000002   PAD
-    0x00023a9c   0x00000094   Code   RO         2451    i.twi_clear_bus     nrf_drv_twi.o
-    0x00023b30   0x0000004c   Code   RO         2452    i.twi_receive_byte  nrf_drv_twi.o
-    0x00023b7c   0x000000a6   Code   RO         2453    i.twi_rx_start_transfer  nrf_drv_twi.o
-    0x00023c22   0x00000048   Code   RO         2454    i.twi_send_byte     nrf_drv_twi.o
-    0x00023c6a   0x00000122   Code   RO         2455    i.twi_transfer      nrf_drv_twi.o
-    0x00023d8c   0x000000ac   Code   RO         2456    i.twi_tx_start_transfer  nrf_drv_twi.o
-    0x00023e38   0x000000b8   Code   RO         2457    i.twi_xfer          nrf_drv_twi.o
-    0x00023ef0   0x00000038   Code   RO         1851    i.tx_byte           nrf_drv_uart.o
-    0x00023f28   0x0000002c   Code   RO         1852    i.tx_done_event     nrf_drv_uart.o
-    0x00023f54   0x00000036   Code   RO          879    i.tx_power_level_encode  ble_advdata.o
+    0x00023a9c   0x00000094   Code   RO         2454    i.twi_clear_bus     nrf_drv_twi.o
+    0x00023b30   0x0000004c   Code   RO         2455    i.twi_receive_byte  nrf_drv_twi.o
+    0x00023b7c   0x000000a6   Code   RO         2456    i.twi_rx_start_transfer  nrf_drv_twi.o
+    0x00023c22   0x00000048   Code   RO         2457    i.twi_send_byte     nrf_drv_twi.o
+    0x00023c6a   0x00000122   Code   RO         2458    i.twi_transfer      nrf_drv_twi.o
+    0x00023d8c   0x000000ac   Code   RO         2459    i.twi_tx_start_transfer  nrf_drv_twi.o
+    0x00023e38   0x000000b8   Code   RO         2460    i.twi_xfer          nrf_drv_twi.o
+    0x00023ef0   0x00000038   Code   RO         1854    i.tx_byte           nrf_drv_uart.o
+    0x00023f28   0x0000002c   Code   RO         1855    i.tx_done_event     nrf_drv_uart.o
+    0x00023f54   0x00000036   Code   RO          875    i.tx_power_level_encode  ble_advdata.o
     0x00023f8a   0x00000002   PAD
     0x00023f8c   0x0000006c   Code   RO           27    i.uart_config       main.o
-    0x00023ff8   0x000000c0   Code   RO         2628    i.uart_event_handler  app_uart_fifo.o
+    0x00023ff8   0x000000c0   Code   RO         2631    i.uart_event_handler  app_uart_fifo.o
     0x000240b8   0x00000048   Code   RO           28    i.uart_events_handler  main.o
-    0x00024100   0x00000160   Code   RO         1853    i.uart_irq_handler  nrf_drv_uart.o
-    0x00024260   0x0000012c   Code   RO         1854    i.uarte_irq_handler  nrf_drv_uart.o
-    0x0002438c   0x0000000c   Code   RO          880    i.uint16_encode     ble_advdata.o
-    0x00024398   0x00000008   Code   RO         2151    i.update_operation_execute  pstorage.o
-    0x000243a0   0x00000014   Code   RO         1269    i.update_status_bit_reset  device_manager_peripheral.o
-    0x000243b4   0x00000090   Code   RO         1097    i.update_timeout_handler  ble_conn_params.o
-    0x00024444   0x00000058   Code   RO         2946    i.user_id_get       app_timer.o
-    0x0002449c   0x00000030   Code   RO         2947    i.user_op_alloc     app_timer.o
-    0x000244cc   0x00000004   Code   RO         2948    i.user_op_enque     app_timer.o
-    0x000244d0   0x0000004e   Code   RO          881    i.uuid_list_encode  ble_advdata.o
-    0x0002451e   0x000000dc   Code   RO          882    i.uuid_list_sized_encode  ble_advdata.o
-    0x000245fa   0x00000012   Code   RO          996    i.whitelist_has_entries  ble_advertising.o
+    0x00024100   0x00000160   Code   RO         1856    i.uart_irq_handler  nrf_drv_uart.o
+    0x00024260   0x0000012c   Code   RO         1857    i.uarte_irq_handler  nrf_drv_uart.o
+    0x0002438c   0x0000000c   Code   RO          876    i.uint16_encode     ble_advdata.o
+    0x00024398   0x00000008   Code   RO         2154    i.update_operation_execute  pstorage.o
+    0x000243a0   0x00000014   Code   RO         1272    i.update_status_bit_reset  device_manager_peripheral.o
+    0x000243b4   0x00000090   Code   RO         1096    i.update_timeout_handler  ble_conn_params.o
+    0x00024444   0x00000058   Code   RO         2940    i.user_id_get       app_timer.o
+    0x0002449c   0x00000030   Code   RO         2941    i.user_op_alloc     app_timer.o
+    0x000244cc   0x00000004   Code   RO         2942    i.user_op_enque     app_timer.o
+    0x000244d0   0x0000004e   Code   RO          877    i.uuid_list_encode  ble_advdata.o
+    0x0002451e   0x000000dc   Code   RO          878    i.uuid_list_sized_encode  ble_advdata.o
+    0x000245fa   0x00000012   Code   RO          995    i.whitelist_has_entries  ble_advertising.o
     0x0002460c   0x00000014   Data   RO           30    .constdata          main.o
     0x00024620   0x00000060   Data   RO          398    .constdata          our_service.o
     0x00024680   0x00000018   Data   RO          515    .constdata          hrs_file.o
     0x00024698   0x00000018   Data   RO          617    .constdata          acc_file.o
-    0x000246b0   0x0000003c   Data   RO          706    .constdata          bsp.o
-    0x000246ec   0x00000004   Data   RO         1099    .constdata          ble_conn_params.o
-    0x000246f0   0x00000034   Data   RO         1271    .constdata          device_manager_peripheral.o
-    0x00024724   0x00000020   Data   RO         1856    .constdata          nrf_drv_uart.o
-    0x00024744   0x00000028   Data   RO         2153    .constdata          pstorage.o
-    0x0002476c   0x0000002c   Data   RO         2459    .constdata          nrf_drv_twi.o
-    0x00024798   0x00000020   Data   RO         2630    .constdata          app_uart_fifo.o
-    0x000247b8   0x00000008   Data   RO         2792    .constdata          app_button.o
-    0x000247c0   0x0000004c   Data   RO         1272    .conststring        device_manager_peripheral.o
-    0x0002480c   0x00000057   Data   RO         3423    .conststring        softdevice_handler.o
+    0x000246b0   0x0000003c   Data   RO          709    .constdata          bsp.o
+    0x000246ec   0x00000004   Data   RO         1098    .constdata          ble_conn_params.o
+    0x000246f0   0x00000034   Data   RO         1274    .constdata          device_manager_peripheral.o
+    0x00024724   0x00000020   Data   RO         1859    .constdata          nrf_drv_uart.o
+    0x00024744   0x00000028   Data   RO         2156    .constdata          pstorage.o
+    0x0002476c   0x0000002c   Data   RO         2462    .constdata          nrf_drv_twi.o
+    0x00024798   0x00000020   Data   RO         2633    .constdata          app_uart_fifo.o
+    0x000247b8   0x00000008   Data   RO         2786    .constdata          app_button.o
+    0x000247c0   0x0000004c   Data   RO         1275    .conststring        device_manager_peripheral.o
+    0x0002480c   0x00000057   Data   RO         3417    .conststring        softdevice_handler.o
     0x00024863   0x00000001   PAD
-    0x00024864   0x00000020   Data   RO         3923    Region$$Table       anon$$obj.o
+    0x00024864   0x00000020   Data   RO         3917    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20002080, Size: 0x000029e8, Max: 0x0000df80, ABSOLUTE)
@@ -3137,39 +3137,39 @@ Memory Map of the image
 
     0x20002080   0x00000005   Data   RW           31    .data               main.o
     0x20002085   0x00000003   PAD
-    0x20002088   0x00000019   Data   RW          707    .data               bsp.o
+    0x20002088   0x00000019   Data   RW          710    .data               bsp.o
     0x200020a1   0x00000003   PAD
-    0x200020a4   0x00000008   Data   RW          814    .data               bsp_btn_ble.o
-    0x200020ac   0x00000020   Data   RW          998    .data               ble_advertising.o
-    0x200020cc   0x00000015   Data   RW         1100    .data               ble_conn_params.o
+    0x200020a4   0x00000008   Data   RW          810    .data               bsp_btn_ble.o
+    0x200020ac   0x00000020   Data   RW          997    .data               ble_advertising.o
+    0x200020cc   0x00000015   Data   RW         1099    .data               ble_conn_params.o
     0x200020e1   0x00000003   PAD
-    0x200020e4   0x00000014   Data   RW         1273    .data               device_manager_peripheral.o
-    0x200020f8   0x00000028   Data   RW         2154    .data               pstorage.o
-    0x20002120   0x00000006   Data   RW         2631    .data               app_uart_fifo.o
+    0x200020e4   0x00000014   Data   RW         1276    .data               device_manager_peripheral.o
+    0x200020f8   0x00000028   Data   RW         2157    .data               pstorage.o
+    0x20002120   0x00000006   Data   RW         2634    .data               app_uart_fifo.o
     0x20002126   0x00000002   PAD
-    0x20002128   0x00000014   Data   RW         2793    .data               app_button.o
-    0x2000213c   0x00000022   Data   RW         2949    .data               app_timer.o
+    0x20002128   0x00000014   Data   RW         2787    .data               app_button.o
+    0x2000213c   0x00000022   Data   RW         2943    .data               app_timer.o
     0x2000215e   0x00000002   PAD
-    0x20002160   0x00000008   Data   RW         3342    .data               retarget.o
-    0x20002168   0x00000018   Data   RW         3424    .data               softdevice_handler.o
-    0x20002180   0x00000004   Data   RW         3539    .data               system_nrf52.o
+    0x20002160   0x00000008   Data   RW         3336    .data               retarget.o
+    0x20002168   0x00000018   Data   RW         3418    .data               softdevice_handler.o
+    0x20002180   0x00000004   Data   RW         3533    .data               system_nrf52.o
     0x20002184   0x00000378   Zero   RW           29    .bss                main.o
-    0x200024fc   0x0000006c   Zero   RW          705    .bss                bsp.o
-    0x20002568   0x00000103   Zero   RW          997    .bss                ble_advertising.o
+    0x200024fc   0x0000006c   Zero   RW          708    .bss                bsp.o
+    0x20002568   0x00000103   Zero   RW          996    .bss                ble_advertising.o
     0x2000266b   0x00000001   PAD
-    0x2000266c   0x0000003c   Zero   RW         1098    .bss                ble_conn_params.o
-    0x200026a8   0x0000014f   Zero   RW         1270    .bss                device_manager_peripheral.o
+    0x2000266c   0x0000003c   Zero   RW         1097    .bss                ble_conn_params.o
+    0x200026a8   0x0000014f   Zero   RW         1273    .bss                device_manager_peripheral.o
     0x200027f7   0x00000001   PAD
-    0x200027f8   0x00000058   Zero   RW         1607    .bss                nrf_drv_gpiote.o
-    0x20002850   0x00000020   Zero   RW         1855    .bss                nrf_drv_uart.o
-    0x20002870   0x000000e4   Zero   RW         2152    .bss                pstorage.o
-    0x20002954   0x00000050   Zero   RW         2458    .bss                nrf_drv_twi.o
-    0x200029a4   0x00000020   Zero   RW         2629    .bss                app_uart_fifo.o
-    0x200029c4   0x00000020   Zero   RW         2791    .bss                app_button.o
-    0x200029e4   0x00000020   Zero   RW         2850    .bss                app_error.o
-    0x20002a04   0x00000058   Zero   RW         3225    .bss                fstorage.o
-    0x20002a5c   0x0000000c   Zero   RW         3422    .bss                softdevice_handler.o
-    0x20002a68   0x00002000   Zero   RW         3518    STACK               arm_startup_nrf52.o
+    0x200027f8   0x00000058   Zero   RW         1610    .bss                nrf_drv_gpiote.o
+    0x20002850   0x00000020   Zero   RW         1858    .bss                nrf_drv_uart.o
+    0x20002870   0x000000e4   Zero   RW         2155    .bss                pstorage.o
+    0x20002954   0x00000050   Zero   RW         2461    .bss                nrf_drv_twi.o
+    0x200029a4   0x00000020   Zero   RW         2632    .bss                app_uart_fifo.o
+    0x200029c4   0x00000020   Zero   RW         2785    .bss                app_button.o
+    0x200029e4   0x00000020   Zero   RW         2844    .bss                app_error.o
+    0x20002a04   0x00000058   Zero   RW         3219    .bss                fstorage.o
+    0x20002a5c   0x0000000c   Zero   RW         3416    .bss                softdevice_handler.o
+    0x20002a68   0x00002000   Zero   RW         3512    STACK               arm_startup_nrf52.o
 
 
 ==============================================================================
@@ -3179,7 +3179,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       474        110         24          0          0      10382   acc_file.o
+       474        110         24          0          0      10314   acc_file.o
        480         80          8         20         32      10026   app_button.o
        168          4          0          0         32       4126   app_error.o
         26          0          0          0          0        790   app_error_weak.o
@@ -3194,21 +3194,21 @@ Image component sizes
        448         18          0          8          0       6577   bsp_btn_ble.o
       4336        262        128         20        335      34093   device_manager_peripheral.o
         24          6          0          0         88       3420   fstorage.o
-       540        110         24          0          0      13315   hrs_file.o
-      2440        562         20          5        888     120057   main.o
+       540        110         24          0          0      13247   hrs_file.o
+      2440        562         20          5        888     119985   main.o
        144          0          0          0          0       1907   nrf_delay.o
         96         12          0          0          0      28975   nrf_drv_common.o
       1402        130          0          0         88      27124   nrf_drv_gpiote.o
       1926         64         44          0         80      33059   nrf_drv_twi.o
       2532        184         32          0         32      44745   nrf_drv_uart.o
-      2104        186         96          0          0      48366   our_service.o
+      2104        186         96          0          0      48298   our_service.o
       4252        430         40         40        228      49726   pstorage.o
         16          0          0          8          0       2894   retarget.o
        708         90         87         24         12      44637   softdevice_handler.o
       1208        124          0          4          0      33934   system_nrf52.o
 
     ----------------------------------------------------------------------
-     33200       3240       1144        260      10468     676287   Object Totals
+     33200       3240       1144        260      10468     676011   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         50          0          1         13          2          0   (incl. Padding)
 
@@ -3252,8 +3252,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     33804       3270       1144        260      10468     642471   Grand Totals
-     33804       3270       1144        260      10468     642471   ELF Image Totals
+     33804       3270       1144        260      10468     642195   Grand Totals
+     33804       3270       1144        260      10468     642195   ELF Image Totals
      33804       3270       1144        260          0          0   ROM Totals
 
 ==============================================================================

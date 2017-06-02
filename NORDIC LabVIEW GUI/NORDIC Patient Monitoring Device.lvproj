@@ -17,7 +17,7 @@
 			<Item Name="QData.ctl" Type="VI" URL="../ctrls/QData.ctl"/>
 			<Item Name="RefsBox.ctl" Type="VI" URL="../ctrls/RefsBox.ctl"/>
 			<Item Name="States.ctl" Type="VI" URL="../ctrls/States.ctl"/>
-			<Item Name="Heart Monitor-50.ico" Type="Document" URL="../ctrls/Heart Monitor-50.ico"/>
+			<Item Name="Heart with Pulse Filled-50.ico" Type="Document" URL="../ctrls/Heart with Pulse Filled-50.ico"/>
 		</Item>
 		<Item Name="subs" Type="Folder">
 			<Item Name="AccDataToRealValue.vi" Type="VI" URL="../subs/AccDataToRealValue.vi"/>
@@ -174,7 +174,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{94631617-0ED2-47E6-AF90-28F1C2FF81C8}</Property>
-				<Property Name="Bld_version.build" Type="Int">4</Property>
+				<Property Name="Bld_version.build" Type="Int">7</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Patinet Monitoring Device.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/Ptient Monitroing Device/Patinet Monitoring Device.exe</Property>
@@ -185,8 +185,8 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/Ptient Monitroing Device/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/ctrls/Heart Monitor-50.ico</Property>
-				<Property Name="Source[0].itemID" Type="Str">{77451004-2573-4A88-9F37-0CC2BEEBDEF9}</Property>
+				<Property Name="Exe_iconItemID" Type="Ref">/My Computer/ctrls/Heart with Pulse Filled-50.ico</Property>
+				<Property Name="Source[0].itemID" Type="Str">{84939B2E-01CC-493D-B757-29594E3E6A6A}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/main.vi</Property>
