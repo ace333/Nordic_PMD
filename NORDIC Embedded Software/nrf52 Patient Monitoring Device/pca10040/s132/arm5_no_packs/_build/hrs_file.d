@@ -1,7 +1,7 @@
 .\_build\hrs_file.o: ..\..\..\HRS_file.c
+.\_build\hrs_file.o: ..\..\..\HRS_file.h
 .\_build\hrs_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\_build\hrs_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\_build\hrs_file.o: ..\..\..\HRS_file.h
 .\_build\hrs_file.o: ..\..\..\..\..\..\components\libraries\util\app_util_platform.h
 .\_build\hrs_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\hrs_file.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\compiler_abstraction.h

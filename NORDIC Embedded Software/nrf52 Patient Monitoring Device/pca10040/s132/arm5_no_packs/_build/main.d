@@ -1,10 +1,9 @@
 .\_build\main.o: ..\..\..\main.c
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\_build\main.o: ..\..\..\..\..\..\components\libraries\util\nordic_common.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\nrf.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\nrf52.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h
+.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h
@@ -36,6 +35,7 @@
 .\_build\main.o: ..\..\..\..\..\..\components\softdevice\s132\headers\ble_hci.h
 .\_build\main.o: ..\..\..\..\..\..\components\ble\common\ble_srv_common.h
 .\_build\main.o: ..\..\..\..\..\..\components\ble\common\ble_advdata.h
+.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\_build\main.o: ..\..\..\..\..\..\components\ble\ble_advertising\ble_advertising.h
 .\_build\main.o: ..\..\..\..\..\..\components\ble\common\ble_conn_params.h
 .\_build\main.o: ..\..\..\..\..\bsp\boards.h

@@ -11,20 +11,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 */
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using MikePhil.Charting.Data;
 using MikePhil.Charting.Components;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Graphics;
 
 using NordicDatabaseDLL;
@@ -62,7 +53,7 @@ namespace NordicMobile.Charts
         public bool CheckIfFall()
         {
             EditLists();
-            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 1.2F, 20);
+            return fall.CheckIfFall(Xes.ToArray(), Yes.ToArray(), Zes.ToArray(), 1.4F, 20);
         }
 
         #endregion

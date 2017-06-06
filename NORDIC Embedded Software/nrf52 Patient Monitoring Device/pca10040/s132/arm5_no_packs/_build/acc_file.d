@@ -1,7 +1,6 @@
 .\_build\acc_file.o: ..\..\..\ACC_file.c
-.\_build\acc_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\_build\acc_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\acc_file.o: ..\..\..\ACC_file.h
+.\_build\acc_file.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\acc_file.o: ..\..\..\..\..\bsp\boards.h
 .\_build\acc_file.o: ..\..\..\..\..\..\components\drivers_nrf\hal\nrf_gpio.h
 .\_build\acc_file.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.12.0\Device\Include\nrf.h

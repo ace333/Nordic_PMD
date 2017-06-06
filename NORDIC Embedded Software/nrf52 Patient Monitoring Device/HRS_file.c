@@ -15,32 +15,35 @@ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
 STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#include <stdlib.h>
-#include <stdio.h>
+
 #include "HRS_file.h"
 #include "config.h"
 
 void MAX30105_config_parameter(uint8_t REGISTER, uint8_t value)
 {
     uint8_t reg[2] = {REGISTER, value};
-		
     ret_code_t err_code = nrf_drv_twi_tx(&MAX30105_twi, MAX30105_ADD, reg, sizeof(reg), false);
-    //printf("%d",err_code) ;
     APP_ERROR_CHECK(err_code);
 }
 void MAX30105_default_HRS_config(void)
 {
+    /*All magic numbers are register values enabling features
+    mentioned in comments, they are taken from MAX30105 documentation,
+    because they are being used only in that function they are not 
+    defined in .h file.	
+    */
+	
     MAX30105_config_parameter(MAX30105_FIFO_CONFIG, 112);
     // avreaging of 8 samples, enables rollover
     MAX30105_config_parameter(MAX30105_MODE_CONFIG, 7);
-    // ALL
+    // ALL diodes ON
     MAX30105_config_parameter(MAX30105_PARTICLE_SENSING_CONFIG, 39);
     // ADC:4096 SampleRate: 100 PulseWinteidith: 411
     MAX30105_config_parameter(MAX30105_LED1, 31);
-    //setting power on LEDs
     MAX30105_config_parameter(MAX30105_LED2, 31);
     MAX30105_config_parameter(MAX30105_LED3, 31);
     MAX30105_config_parameter(MAX30105_PROXIMITY, 31);
+    //setting defaut current power off LEDs
     MAX30105_config_parameter(MAX30105_SLOT1, 18);
     //Enable slots 1 and 2
     MAX30105_config_parameter(MAX30105_SLOT2, 0);
@@ -49,10 +52,8 @@ void MAX30105_default_HRS_config(void)
 void MAX30105_set_pointer(uint8_t REGISTER)
 {
     ret_code_t err_code;
-    uint8_t reg[1];
-    /* Writing to pointer byte. */
-    reg[0] = REGISTER;
-    err_code = nrf_drv_twi_tx(&MAX30105_twi, MAX30105_ADD, reg, 1, false);
+    uint8_t reg = REGISTER;
+    err_code = nrf_drv_twi_tx(&MAX30105_twi, MAX30105_ADD, &reg, 1, false);
     APP_ERROR_CHECK(err_code);
 }
 uint8_t MAX30105_Get_Byte(uint8_t ADRESS, uint8_t REGISTER)
@@ -86,8 +87,8 @@ uint32_t MAX30105_Get_Sample (void)
     uint8_t read_ptr;
     int no_samples;
     uint8_t data [6] ; //defaultowy bufor na 6 probek
-	  uint32_t IR_value = 0 ;
-	  uint32_t tab_samples[99] ; // kolejne wartosci z kolejki
+    uint32_t IR_value = 0 ;
+    uint32_t tab_samples[99] ; // bufor na kolejne wartosci z kolejki
 	
     wrt_ptr = MAX30105_Get_Byte(MAX30105_ADD, MAX30105_FIFO_WRITE);
     read_ptr = MAX30105_Get_Byte(MAX30105_ADD, MAX30105_FIFO_READ);
@@ -98,14 +99,13 @@ uint32_t MAX30105_Get_Sample (void)
     {
         MAX30105_set_pointer(MAX30105_FIFO_DATA);
         nrf_drv_twi_rx(&MAX30105_twi, MAX30105_ADD, data, 6);
-        //data from 0 - 2 indexes is red and we don't care
+        //data from 0 - 2 indexes is irrelevant, but must be read
         IR[3] = 0 ;
         IR[2] = data[3];
         IR[1] = data[4];
         IR[0] = data[5];
         IR_value = 65536*IR[2] + 256*IR[1] + IR[0] ;
         tab_samples[i] = IR_value ;
-        // debug NRF_LOG_INFO("%d , %d , %d \r\n",IR[1],IR[2],IR[3]);
     }
     IR_value = tab_samples[no_samples-1] ; 
     return IR_value ;

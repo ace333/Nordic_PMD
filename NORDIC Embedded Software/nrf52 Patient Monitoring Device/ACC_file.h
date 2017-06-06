@@ -25,7 +25,6 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "nrf_delay.h"
 #define NRF_LOG_MODULE_NAME "APP"
 #include "nrf_log.h"
-//#include "nrf_log_ctrl.h"
 
 /* TWI instance ID. */
 #define LSM303D_INSTANCE_ID     1
@@ -58,9 +57,6 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define LSM303D_OUT_Z_L_A				0x2c
 #define LSM303D_OUT_Z_H_A				0x2d
 
-/* Indicates if operation on TWI has ended. */
-//static volatile bool a_xfer_done = false;
-
 /* TWI instance. */
 static const nrf_drv_twi_t LSM303D_twi = NRF_DRV_TWI_INSTANCE(LSM303D_INSTANCE_ID);
 
@@ -71,9 +67,11 @@ uint8_t LSM303D_TWI_Get_Byte(uint8_t ADRESS, uint8_t REGISTER);
 void LSM303D_twi_init (void) ;
 	
 int LSM303D_Get_Temperature(void) ;
+
+int16_t LSM303D_Get_ACC(uint8_t ADD_HIGH, uint8_t ADD_LOW);
 	
-int LSM303D_Get_X(void) ;
-int LSM303D_Get_Y(void) ;
-int LSM303D_Get_Z(void) ;
+int16_t LSM303D_Get_X(void) ;
+int16_t LSM303D_Get_Y(void) ;
+int16_t LSM303D_Get_Z(void) ;
 
 void LSM303D_Set_Default_Mode(void) ;

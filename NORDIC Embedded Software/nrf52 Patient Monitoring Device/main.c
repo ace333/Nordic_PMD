@@ -16,8 +16,7 @@ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdint.h>
-#include <string.h>
+
 #include "nordic_common.h"
 #include "nrf.h"
 #include "app_error.h"
@@ -39,7 +38,6 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "app_uart.h"
 #include "HRS_file.h"
 #include "ACC_file.h"
-
 
 /*UART buffer size. */
 #define UART_TX_BUF_SIZE 256
@@ -78,14 +76,14 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 static dm_application_instance_t        m_app_handle;                               /**< Application identifier allocated by device manager */
 
-static uint16_t                          m_conn_handle = BLE_CONN_HANDLE_INVALID;   /**< Handle of the current connection. */
+static uint16_t    m_conn_handle = BLE_CONN_HANDLE_INVALID;   /**< Handle of the current connection. */
 
 
-// FROM_SERVICE_TUTORIAL: Declare a service structure for our application
+//Declare a service structure for our application
 ble_os_t acc_service;
 ble_os_t hrs_service;
 
-// OUR_JOB: Step 3.G, Declare an app_timer id variable and define our timer interval and define a timer interval
+//Declare an app_timer id variable and define our timer interval and define a timer interval
 APP_TIMER_DEF(m_our_char_timer_id);
 #define OUR_CHAR_TIMER_INTERVAL     APP_TIMER_TICKS(200, APP_TIMER_PRESCALER) // 1000 ms intervals
                                    
@@ -106,30 +104,30 @@ void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
 }
 
 
-// ALREADY_DONE_FOR_YOU: This is a timer event handler
+// This is a timer event handler
 static void timer_timeout_handler(void * p_context)
 {
-	  //Get and send data
-		int ACC ;
-		uint32_t HRS_Data = 99 ;
+    //Get and send data
+    int16_t ACC ;
+    uint32_t HRS_Data ;
 	
     ACC = LSM303D_Get_X() ;
-		printf("X: %d\r\n",ACC);
+    printf("X: %d\r\n",ACC);
     acc1_value_update(&acc_service, &ACC);
 	
-		ACC = LSM303D_Get_Y() ;
-		printf("Y: %d\r\n",ACC);
-		acc2_value_update(&acc_service, &ACC);
+    ACC = LSM303D_Get_Y() ;
+    printf("Y: %d\r\n",ACC);
+    acc2_value_update(&acc_service, &ACC);
 	
-		ACC = LSM303D_Get_Z() ;
-		printf("Z: %d\r\n",ACC);
-		acc3_value_update(&acc_service, &ACC);
+    ACC = LSM303D_Get_Z() ;
+    printf("Z: %d\r\n",ACC);
+    acc3_value_update(&acc_service, &ACC);
 	
-		HRS_Data = MAX30105_Get_Sample () ;
-		printf("HRS: %d\r\n",HRS_Data);
-		hrs_value_update(&hrs_service, &HRS_Data);
+    HRS_Data = MAX30105_Get_Sample () ;
+    printf("HRS: %d\r\n",HRS_Data);
+    hrs_value_update(&hrs_service, &HRS_Data);
 	
-	  //dioda lans, niezly bans
+    //dioda tylko dla bajery
     nrf_gpio_pin_toggle(LED_4);
 		
 }
@@ -346,7 +344,7 @@ static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
     ble_advertising_on_ble_evt(p_ble_evt);
     // OUR_JOB: Step 3.C, Call ble_our_service_on_ble_evt() to do housekeeping of ble connections related to our service and characteristic
     ble_our_service_on_ble_evt(&acc_service, p_ble_evt);
-		ble_our_service_on_ble_evt(&hrs_service, p_ble_evt);
+    ble_our_service_on_ble_evt(&hrs_service, p_ble_evt);
 }
 
 
@@ -544,7 +542,6 @@ static void power_manage(void)
     APP_ERROR_CHECK(err_code);
 }
 
-//WYRZUCONY UART
 /**
  * @brief UART events handler.
  */
@@ -604,7 +601,6 @@ int main(void)
     bool erase_bonds;
     
     uart_config();
-		nrf_delay_ms(500);
     printf("Start\r\n");
 
     // Initialize.
@@ -617,20 +613,18 @@ int main(void)
     advertising_init();
     conn_params_init();
 	
-		printf("Basic ini done\r\n"); 
-		nrf_delay_ms(500);
-	
-		//Init for HRS
-  	MAX30105_twi_init();
-		nrf_delay_ms(500);
-		MAX30105_default_HRS_config(); 
-		printf("HRS init fine\r\n"); 
+    printf("Basic ini done\r\n"); 
+   
+    //Init for HRS
+    MAX30105_twi_init();
+
+    MAX30105_default_HRS_config(); 
+    printf("HRS init fine\r\n"); 
 		
-		//Init for ACC
-		LSM303D_twi_init();
-		nrf_delay_ms(500);
-		LSM303D_Set_Default_Mode(); 
-		printf("ACC init fine\r\n"); 
+    //Init for ACC
+    LSM303D_twi_init();
+    LSM303D_Set_Default_Mode(); 
+    printf("ACC init fine\r\n"); 
 		
     // Start execution.
     application_timers_start();
