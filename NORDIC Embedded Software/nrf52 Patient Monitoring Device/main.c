@@ -76,7 +76,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 static dm_application_instance_t        m_app_handle;                               /**< Application identifier allocated by device manager */
 
-static uint16_t                          m_conn_handle = BLE_CONN_HANDLE_INVALID;   /**< Handle of the current connection. */
+static uint16_t    m_conn_handle = BLE_CONN_HANDLE_INVALID;   /**< Handle of the current connection. */
 
 
 //Declare a service structure for our application
@@ -109,7 +109,7 @@ static void timer_timeout_handler(void * p_context)
 {
     //Get and send data
     int16_t ACC ;
-    uint32_t HRS_Data = 99 ; //default value to debug fast 
+    uint32_t HRS_Data ;
 	
     ACC = LSM303D_Get_X() ;
     printf("X: %d\r\n",ACC);
@@ -117,7 +117,7 @@ static void timer_timeout_handler(void * p_context)
 	
     ACC = LSM303D_Get_Y() ;
     printf("Y: %d\r\n",ACC);
-	  acc2_value_update(&acc_service, &ACC);
+    acc2_value_update(&acc_service, &ACC);
 	
     ACC = LSM303D_Get_Z() ;
     printf("Z: %d\r\n",ACC);
@@ -601,7 +601,6 @@ int main(void)
     bool erase_bonds;
     
     uart_config();
-		nrf_delay_ms(500);
     printf("Start\r\n");
 
     // Initialize.
@@ -615,17 +614,15 @@ int main(void)
     conn_params_init();
 	
     printf("Basic ini done\r\n"); 
-    nrf_delay_ms(500);
-	
+   
     //Init for HRS
     MAX30105_twi_init();
-		nrf_delay_ms(500);
+
     MAX30105_default_HRS_config(); 
     printf("HRS init fine\r\n"); 
 		
     //Init for ACC
     LSM303D_twi_init();
-    nrf_delay_ms(500);
     LSM303D_Set_Default_Mode(); 
     printf("ACC init fine\r\n"); 
 		

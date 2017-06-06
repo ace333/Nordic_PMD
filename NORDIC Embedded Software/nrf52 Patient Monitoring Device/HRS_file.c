@@ -43,7 +43,7 @@ void MAX30105_default_HRS_config(void)
     MAX30105_config_parameter(MAX30105_LED2, 31);
     MAX30105_config_parameter(MAX30105_LED3, 31);
     MAX30105_config_parameter(MAX30105_PROXIMITY, 31);
-    //setting current power off LEDs
+    //setting defaut current power off LEDs
     MAX30105_config_parameter(MAX30105_SLOT1, 18);
     //Enable slots 1 and 2
     MAX30105_config_parameter(MAX30105_SLOT2, 0);
@@ -106,7 +106,6 @@ uint32_t MAX30105_Get_Sample (void)
         IR[0] = data[5];
         IR_value = 65536*IR[2] + 256*IR[1] + IR[0] ;
         tab_samples[i] = IR_value ;
-        // debug NRF_LOG_INFO("%d , %d , %d \r\n",IR[1],IR[2],IR[3]);
     }
     IR_value = tab_samples[no_samples-1] ; 
     return IR_value ;

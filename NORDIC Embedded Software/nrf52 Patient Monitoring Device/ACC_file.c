@@ -20,19 +20,19 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ACC_file.h"
 #include "config.h"
 
-void LSM303D_set_mode(uint8_t REGISTER)
+void LSM303D_set_mode(uint8_t register_num)
 {
     ret_code_t err_code;
-    uint8_t reg = REGISTER;
+    uint8_t reg = register_num;
     err_code = nrf_drv_twi_tx(&LSM303D_twi, LSM303D_ADDR, &reg, 1, false);
     APP_ERROR_CHECK(err_code);
 }
-uint8_t LSM303D_TWI_Get_Byte(uint8_t ADRESS, uint8_t REGISTER)
+uint8_t LSM303D_TWI_Get_Byte(uint8_t address, uint8_t register_num)
 {
-    LSM303D_set_mode(REGISTER);
+    LSM303D_set_mode(register_num);
     uint8_t data;
     ret_code_t err_code ;
-    err_code = nrf_drv_twi_rx(&LSM303D_twi, ADRESS, &data, 1);
+    err_code = nrf_drv_twi_rx(&LSM303D_twi, address, &data, 1);
     APP_ERROR_CHECK(err_code);
     return data;
 }
@@ -55,25 +55,22 @@ int LSM303D_Get_Temperature()
     uint8_t low = LSM303D_TWI_Get_Byte(LSM303D_ADDR, LSM303D_TEMP_OUT_L);
     uint8_t high = LSM303D_TWI_Get_Byte(LSM303D_ADDR, LSM303D_TEMP_OUT_H);
     int16_t x = 0 ;
-    x=((x+high)<<8)+low ;
-    //potrzebna konwersja na stopnie Celsjusza
-    int temp = x;
-    return temp;
+    x = ((x +high) << 8 ) + low ;
+    return x;
 }
 
-int16_t LSM303D_Get_ACC(uint8_t ADD_HIGH, uint8_t ADD_LOW)
+int16_t LSM303D_Get_ACC(uint8_t add_high, uint8_t add_low)
 {
     //Tej funkcji mozna uzywac dopiero po wczesniejszym wlaczeniu akcelerometru
-	  int16_t acc = 0;
+    int16_t acc = 0;
     uint8_t byte_array [2] ;
 	  //Pobierz dwa bajty skladajace sie na wartosc przyspieszenia
-    byte_array[0] = LSM303D_TWI_Get_Byte(LSM303D_ADDR, ADD_LOW);
-    byte_array[1] = LSM303D_TWI_Get_Byte(LSM303D_ADDR, ADD_HIGH);
+    byte_array[0] = LSM303D_TWI_Get_Byte(LSM303D_ADDR, add_low);
+    byte_array[1] = LSM303D_TWI_Get_Byte(LSM303D_ADDR, add_high);
     //Konwersja
-		acc = 256*byte_array[1] + byte_array[0] ;
+		acc = 256 * byte_array[1] + byte_array[0] ;
     return acc;
 }
-
 
 int16_t LSM303D_Get_X (void)
 {
@@ -97,17 +94,17 @@ void LSM303D_Set_Default_Mode(void)
     */
 	
     // Turning on temperature meassurement
-    uint8_t reg[2] = { LSM303D_CTRL5 , 144 };
+    uint8_t reg[2] = { LSM303D_CTRL5 , 144 }; // enable default temp. messurement
     ret_code_t err_code = nrf_drv_twi_tx(&LSM303D_twi, LSM303D_ADDR, reg, sizeof(reg), false);
     APP_ERROR_CHECK(err_code);
 		
-    nrf_delay_ms(500);
+    nrf_delay_ms(100); // wait until initialization of messurment is done (advised in documentation of LSM303D)
 		
     // Turning on accelerometer messurement
     reg[0] = LSM303D_CTRL1;
-    reg[1] = 71 ;
+    reg[1] = 71 ; // enable default acc. messurement
     err_code = nrf_drv_twi_tx(&LSM303D_twi, LSM303D_ADDR, reg, sizeof(reg), false);
     APP_ERROR_CHECK(err_code);
 		
-    nrf_delay_ms(500);
+    nrf_delay_ms(100);
 }

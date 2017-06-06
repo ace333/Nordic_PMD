@@ -41,9 +41,7 @@ void ble_our_service_on_ble_evt(ble_os_t * p_our_service, ble_evt_t * p_ble_evt)
     // OUR_JOB: Step 3.D Implement switch case handling BLE events related to our service. 
     switch (p_ble_evt->header.evt_id)
     {        
-        //case BLE_GATTS_EVT_WRITE:
-          //  on_ble_write_acc1(p_our_service, p_ble_evt);
-            //break;
+       
         case BLE_GAP_EVT_CONNECTED:
             p_our_service->conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
             break;
